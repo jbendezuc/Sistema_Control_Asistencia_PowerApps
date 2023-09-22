@@ -234,6 +234,23 @@
                         longitudmaxima_SL06,
                         -77.07731
                     );
+                    //UBICACION LOCAL 07
+                    Set(
+                        latitudminima_SL07,
+                        -12.04536
+                    );
+                    Set(
+                        latitudmaxima_SL07,
+                        -12.04691
+                    );
+                    Set(
+                        longitudminima_SL07,
+                        -77.04715
+                    );
+                    Set(
+                        longitudmaxima_SL07,
+                        -77.04932
+                    );
                     //UBICACION LOCAL 09
                     Set(
                         latitudminima_SL09,
@@ -361,11 +378,20 @@
                                 ubicacion,
                                 "LOCAL 06"
                             ),
+                            If(
+                            miLatitud <= latitudminima_SL07 && miLatitud >= latitudmaxima_SL07 && miLongitud <= longitudminima_SL07 && miLongitud >= longitudmaxima_SL07,
+                            Set(
+                                ubicacion,
+                                "LOCAL 07"
+                            ),
                         Set(
                             ubicacion,
                             "LEJOS DEL LOCAL"
                         )
-                    ))))))))));
+                    )))))))))));
+                    //ESTADO DE LA ASISTENCIA
+                    If(ubicacion = "LOCAL 07",Set(estado,"ASISTIO"),Set(estado,"FALTO"));
+                    
                     //REGISTRO DE ASISTENCIA
                     Patch(
                         ASISTENCIA_2023,
@@ -376,6 +402,7 @@
                             LOCAL: Local.Text,
                             FECHA: Text(TimeInSec,"dd/mm/yyyy"),
                             HORA: Text(TimeInSec,"[$-en-US]hh:mm:ss AM/PM"),
+                            ESTADO:estado,
                             LATITUD:miLatitud,
                             LONGITUD:miLongitud
                         }
