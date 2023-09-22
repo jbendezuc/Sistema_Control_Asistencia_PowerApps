@@ -302,6 +302,23 @@
                         longitudmaxima_SL10,
                         -76.99252
                     );
+                    //UBICACION LOCAL 12
+                    Set(
+                        latitudminima_SL12,
+                        -12.04814
+                    );
+                    Set(
+                        latitudmaxima_SL12,
+                        -12.04948
+                    );
+                    Set(
+                        longitudminima_SL12,
+                        -77.03936
+                    );
+                    Set(
+                        longitudmaxima_SL12,
+                        -77.04046
+                    );
                     //UBICACION LOCAL SL14
                     Set(
                         latitudminima_SL14,
@@ -407,11 +424,17 @@
                                 ubicacion,
                                 "SL08"
                             ),
+                            If(
+                            miLatitud <= latitudminima_SL12 && miLatitud >= latitudmaxima_SL12 && miLongitud <= longitudminima_SL12 && miLongitud >= longitudmaxima_SL12,
+                            Set(
+                                ubicacion,
+                                "SL12"
+                            ),
                         Set(
                             ubicacion,
                             "LEJOS DEL LOCAL"
                         )
-                    ))))))))))));
+                    )))))))))))));
                     //ESTADO DE LA ASISTENCIA
                     
                     Set(HoraActual, Now());
