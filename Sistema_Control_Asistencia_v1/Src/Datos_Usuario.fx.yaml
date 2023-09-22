@@ -217,6 +217,23 @@
                         longitudmaxima_SL05,
                         -77.03891
                     );
+                    //UBICACION LOCAL 06
+                    Set(
+                        latitudminima_SL06,
+                        -12.09366
+                    );
+                    Set(
+                        latitudmaxima_SL06,
+                        -12.09481
+                    );
+                    Set(
+                        longitudminima_SL06,
+                        -77.07623
+                    );
+                    Set(
+                        longitudmaxima_SL06,
+                        -77.07731
+                    );
                     //UBICACION LOCAL 09
                     Set(
                         latitudminima_SL09,
@@ -338,11 +355,17 @@
                                 ubicacion,
                                 "LOCAL 05"
                             ),
+                            If(
+                            miLatitud <= latitudminima_SL06 && miLatitud >= latitudmaxima_SL06 && miLongitud <= longitudminima_SL06 && miLongitud >= longitudmaxima_SL06,
+                            Set(
+                                ubicacion,
+                                "LOCAL 06"
+                            ),
                         Set(
                             ubicacion,
                             "LEJOS DEL LOCAL"
                         )
-                    )))))))));
+                    ))))))))));
                     //REGISTRO DE ASISTENCIA
                     Patch(
                         ASISTENCIA_2023,
