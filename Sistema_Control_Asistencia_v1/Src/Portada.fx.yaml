@@ -47,6 +47,8 @@ Portada As screen:
         Fill: =RGBA(152, 208, 70, 1)
         FontWeight: =FontWeight.Bold
         Height: =84
+        OnSelect: |
+            =
         Size: =24
         Text: ="Ver Asistencia"
         Width: =306

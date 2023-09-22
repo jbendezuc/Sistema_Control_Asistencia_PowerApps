@@ -413,9 +413,12 @@
                         )
                     ))))))))))));
                     //ESTADO DE LA ASISTENCIA
-                    /*
-                    If(ubicacion = "SL01" || ubicacion = "SL02" || ubicacion = "SL03" || ubicacion = "SL04" || ubicacion = "SL05" || ubicacion = "SL06" || ubicacion = "SL07" || ubicacion = "SL08" || ubicacion = "SL09" || ubicacion = "SL10" || ubicacion = "SL12" || ubicacion = "SL14" || ubicacion = "SL16";If(Text(TimeInSec;"[$-en-US]hh:mm tt")<= "08:20";Set(estado;"ASISTIO");Set(estado;"TARDE"));Set(estado;"FALTO"));;
-                    */
+                    
+                    Set(HoraActual, Now());
+                    Set(HoraLimite, Text("08:15 PM", "[$-es-ES]hh:mm"));
+                    
+                    If(ubicacion = "SL01" || ubicacion = "SL02" || ubicacion = "SL03" || ubicacion = "SL04" || ubicacion = "SL05" || ubicacion = "SL06" || ubicacion = "SL07" || ubicacion = "SL08" || ubicacion = "SL09" || ubicacion = "SL10" || ubicacion = "SL12" || ubicacion = "SL14" || ubicacion = "SL16",If(Hour(HoraActual) * 60 + Minute(HoraActual) < Hour(HoraLimite) * 60 + Minute(HoraLimite), Set(estado, "ASISTIO"), Set(resultado, "TARDE")),Set(estado,"FALTO"));
+                    
                     //REGISTRO DE ASISTENCIA
                     Patch(
                         ASISTENCIA_2023,
@@ -426,7 +429,7 @@
                             LOCAL: Local.Text,
                             FECHA: Text(TimeInSec,"dd/mm/yyyy"),
                             HORA: Text(TimeInSec,"[$-en-US]hh:mm:ss AM/PM"),
-                            //ESTADO:estado;
+                            ESTADO:estado,
                             LATITUD:miLatitud,
                             LONGITUD:miLongitud
                         }
