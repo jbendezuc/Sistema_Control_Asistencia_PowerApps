@@ -1,0 +1,612 @@
+"Datos_Usuario As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    BackgroundImage: ='oro viejo'
+    ImagePosition: =ImagePosition.Fill
+
+    RectQuickActionBar1 As rectangle:
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName1 As label:
+        Align: =Align.Center
+        Height: =88
+        Size: =27
+        Text: ="REGISTRO ASISTENCIA"
+        Width: =585
+        X: =55
+        ZIndex: =2
+
+    Canvas1 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar1.Y + RectQuickActionBar1.Height
+        ZIndex: =3
+
+        DataCard1 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =922
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Octagon2_3 As octagon:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderThickness: =3
+                Fill: =RGBA(194, 164, 76, 1)
+                Height: =473
+                Width: =194
+                X: =299
+                Y: =29
+                ZIndex: =1
+
+            Octagon2_2 As octagon:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderThickness: =3
+                Fill: =RGBA(194, 164, 76, 1)
+                Height: =459
+                Width: =189
+                X: =135
+                Y: =73
+                ZIndex: =2
+
+            Octagon2_1 As octagon:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderThickness: =3
+                Fill: =RGBA(194, 164, 76, 1)
+                Height: =400
+                Width: =216
+                X: =291
+                Y: =235
+                ZIndex: =3
+
+            Octagon2 As octagon:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderThickness: =3
+                Fill: =RGBA(194, 164, 76, 1)
+                Height: =389
+                Width: =239
+                X: =135
+                Y: =252
+                ZIndex: =4
+
+            Rectangle3_1 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderThickness: =5
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =132
+                Width: =260
+                X: =192
+                Y: =546
+                ZIndex: =5
+
+            Rectangle3 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderThickness: =5
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =132
+                Width: =260
+                X: =192
+                Y: =16
+                ZIndex: =6
+
+            Circle1_1 As circle:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderThickness: =2
+                Fill: =RGBA(194, 164, 76, 1)
+                Height: =491
+                Width: =537
+                X: =53
+                Y: =107
+                ZIndex: =7
+
+            Circle1 As circle:
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =5
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =444
+                Width: =484
+                X: =80
+                Y: =131
+                ZIndex: =8
+
+            Registrar As button:
+                BorderThickness: =5
+                Color: =RGBA(0, 0, 0, 1)
+                Fill: =RGBA(39, 207, 39, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                OnSelect: |
+                    =//UBICACION ACTUAL
+                    Set(
+                        miLatitud,
+                        Location.Latitude
+                    );
+                    Set(
+                        miLongitud,
+                        Location.Longitude
+                    );
+                    //UBICACION LOCAL 01
+                    Set(
+                        latitudminima_SL01,
+                        -12.04619
+                    );
+                    Set(
+                        latitudmaxima_SL01,
+                        -12.04806
+                    );
+                    Set(
+                        longitudminima_SL01,
+                        -77.03967
+                    );
+                    Set(
+                        longitudmaxima_SL01,
+                        -77.04099
+                    );
+                    //UBICACION LOCAL 02
+                    Set(
+                        latitudminima_SL02,
+                        -12.04719
+                    );
+                    Set(
+                        latitudmaxima_SL02,
+                        -12.04775
+                    );
+                    Set(
+                        longitudminima_SL02,
+                        -77.04120
+                    );
+                    Set(
+                        longitudmaxima_SL02,
+                        -77.04220
+                    );
+                    //UBICACION LOCAL 03
+                    Set(
+                        latitudminima_SL03,
+                        -12.05404
+                    );
+                    Set(
+                        latitudmaxima_SL03,
+                        -12.05482
+                    );
+                    Set(
+                        longitudminima_SL03,
+                        -77.03742
+                    );
+                    Set(
+                        longitudmaxima_SL03,
+                        -77.03814
+                    );
+                    //UBICACION LOCAL 04
+                    Set(
+                        latitudminima_SL04,
+                        -12.08541
+                    );
+                    Set(
+                        latitudmaxima_SL04,
+                        -12.08668
+                    );
+                    Set(
+                        longitudminima_SL04,
+                        -77.05821
+                    );
+                    Set(
+                        longitudmaxima_SL04,
+                        -77.05950
+                    );
+                    //UBICACION LOCAL 09
+                    Set(
+                        latitudminima_SL09,
+                        -12.07964
+                    );
+                    Set(
+                        latitudmaxima_SL09,
+                        -12.08062
+                    );
+                    Set(
+                        longitudminima_SL09,
+                        -77.07140
+                    );
+                    Set(
+                        longitudmaxima_SL09,
+                        -77.07273
+                    );
+                    //UBICACION LOCAL 10
+                    Set(
+                        latitudminima_SL10,
+                        -12.04180
+                    );
+                    Set(
+                        latitudmaxima_SL10,
+                        -12.04385
+                    );
+                    Set(
+                        longitudminima_SL10,
+                        -76.99029
+                    );
+                    Set(
+                        longitudmaxima_SL10,
+                        -76.99252
+                    );
+                    //UBICACION LOCAL SL14
+                    Set(
+                        latitudminima_SL14,
+                        -12.07750
+                    );
+                    Set(
+                        latitudmaxima_SL14,
+                        -12.07846
+                    );
+                    Set(
+                        longitudminima_SL14,
+                        -77.03410
+                    );
+                    Set(
+                        longitudmaxima_SL14,
+                        -77.03517
+                    );
+                    //UBICACION DE RECTORADO - SL16
+                    Set(
+                        latitudminima_RECTORADO,
+                        -12.07520
+                    );
+                    Set(
+                        latitudmaxima_RECTORADO,
+                        -12.07570
+                    );
+                    Set(
+                        longitudminima_RECTORADO,
+                        -77.09113
+                    );
+                    Set(
+                        longitudmaxima_RECTORADO,
+                        -77.09235
+                    );
+                    
+                    //LOGICA CONDICIONAL LOCALES
+                    If(
+                        miLatitud <= latitudminima_RECTORADO && miLatitud >= latitudmaxima_RECTORADO && miLongitud <= longitudminima_RECTORADO && miLongitud >= longitudmaxima_RECTORADO,
+                        Set(
+                            ubicacion,
+                            "RECTORADO"
+                        ),
+                        If(
+                            miLatitud <= latitudminima_SL10 && miLatitud >= latitudmaxima_SL10 && miLongitud <= longitudminima_SL10 && miLongitud >= longitudmaxima_SL10,
+                            Set(
+                                ubicacion,
+                                "LOCAL 10"
+                            ),If(
+                            miLatitud <= latitudminima_SL09 && miLatitud >= latitudmaxima_SL09 && miLongitud <= longitudminima_SL09 && miLongitud >= longitudmaxima_SL09,
+                            Set(
+                                ubicacion,
+                                "LOCAL 09"
+                            ),If(
+                            miLatitud <= latitudminima_SL14 && miLatitud >= latitudmaxima_SL14 && miLongitud <= longitudminima_SL14 && miLongitud >= longitudmaxima_SL14,
+                            Set(
+                                ubicacion,
+                                "LOCAL 14"
+                            ),If(
+                            miLatitud <= latitudminima_SL01 && miLatitud >= latitudmaxima_SL01 && miLongitud <= longitudminima_SL01 && miLongitud >= longitudmaxima_SL01,
+                            Set(
+                                ubicacion,
+                                "LOCAL 01"
+                            ),
+                            If(
+                            miLatitud <= latitudminima_SL02 && miLatitud >= latitudmaxima_SL02 && miLongitud <= longitudminima_SL02 && miLongitud >= longitudmaxima_SL02,
+                            Set(
+                                ubicacion,
+                                "LOCAL 02"
+                            ),
+                            If(
+                            miLatitud <= latitudminima_SL03 && miLatitud >= latitudmaxima_SL03 && miLongitud <= longitudminima_SL03 && miLongitud >= longitudmaxima_SL03,
+                            Set(
+                                ubicacion,
+                                "LOCAL 03"
+                            ),
+                            If(
+                            miLatitud <= latitudminima_SL04 && miLatitud >= latitudmaxima_SL04 && miLongitud <= longitudminima_SL04 && miLongitud >= longitudmaxima_SL04,
+                            Set(
+                                ubicacion,
+                                "LOCAL 04"
+                            ),
+                        Set(
+                            ubicacion,
+                            "LEJOS DEL LOCAL"
+                        )
+                    ))))))));
+                    //REGISTRO DE ASISTENCIA
+                    Patch(
+                        ASISTENCIA_2023,
+                        Defaults(ASISTENCIA_2023),
+                        {
+                            TECNICO: Nombre_Tecnico.Text,
+                            CORREO_TECNICO: User().Email,
+                            LOCAL: Local.Text,
+                            FECHA: Text(TimeInSec,"dd/mm/yyyy"),
+                            HORA: Text(TimeInSec,"[$-en-US]hh:mm:ss AM/PM"),
+                            LATITUD:miLatitud,
+                            LONGITUD:miLongitud
+                        }
+                    );Navigate(Portada,ScreenTransition.CoverRight)
+                Size: =24
+                Text: ="Registrar"
+                Width: =280
+                X: =171
+                Y: =852
+                ZIndex: =9
+
+            Local As label:
+                Height: =70
+                Size: =21
+                Text: =ubicacion
+                Width: =560
+                X: =80
+                Y: =713
+                ZIndex: =10
+
+            Nombre As label:
+                FontWeight: =FontWeight.Bold
+                Size: =20
+                Text: |-
+                    ="Técnico : "
+                X: =33
+                Y: =699
+                ZIndex: =11
+
+            Nombre_Tecnico As label:
+                AutoHeight: =true
+                Height: =44
+                Size: =20
+                Text: =User().FullName
+                Width: =394
+                X: =173
+                Y: =700
+                ZIndex: =12
+
+            Adjuntar_Foto As label:
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                Size: =20
+                Text: |-
+                    ="Adjuntar Foto:"
+                Width: =232
+                X: =44
+                Y: =783
+                ZIndex: =13
+
+            Timer1 As timer:
+                AutoStart: =true
+                DisplayMode: =DisplayMode.View
+                Duration: =1000
+                Height: =70
+                OnTimerEnd: =Set(TimeInSec,Now())
+                OnTimerStart: =Set(TimeInSec,Now())
+                Repeat: =true
+                Visible: =false
+                Width: =280
+                X: =360
+                Y: =3
+                ZIndex: =14
+
+            Hora As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.Arial
+                FontWeight: =FontWeight.Bold
+                Height: =154
+                Size: =85
+                Text: |
+                    =Text(Mod(Hour(TimeInSec), 12) & ":" & Text(Minute(TimeInSec),"00"), "[$-en-US]hh:mm")
+                Width: =411
+                X: =119
+                Y: =195
+                ZIndex: =15
+
+            AM_PM As label:
+                Align: =Align.Center
+                Fill: =RGBA(255, 255, 255, 1)
+                Font: =Font.Arial
+                FontWeight: =FontWeight.Bold
+                Height: =35
+                Size: =20
+                Text: =Text(TimeInSec,"[$-en-US]AM/PM")
+                Width: =78
+                X: =285
+                Y: =338
+                ZIndex: =16
+
+            Segundos As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 0, 1)
+                Font: =Font.Arial
+                FontWeight: =FontWeight.Bold
+                Height: =45
+                Size: =30
+                Text: =Text(TimeInSec,"[$-en-US]ss")
+                Width: =94
+                X: =444
+                Y: =276
+                ZIndex: =17
+
+            Fecha_Contenedor As circle:
+                Fill: =RGBA(85, 255, 0, 1)
+                Height: =142
+                Width: =138
+                X: =108
+                Y: =349
+                ZIndex: =18
+
+            Fecha_Contenedor_1 As circle:
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =123
+                Width: =125
+                X: =103
+                Y: =358
+                ZIndex: =19
+
+            Fecha As label:
+                Align: =Align.Center
+                Color: =RGBA(199, 252, 119, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =111
+                Size: =20
+                Text: =Text(TimeInSec,"dd/mm")
+                Width: =105
+                X: =113
+                Y: =357
+                ZIndex: =20
+
+            Ano_Contenedor As circle:
+                Fill: =RGBA(183, 112, 250, 1)
+                Height: =142
+                Width: =138
+                X: =255
+                Y: =418
+                ZIndex: =21
+
+            Ano_Contenedor_2 As circle:
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =133
+                Width: =125
+                X: =261
+                Y: =437
+                ZIndex: =22
+
+            Fecha_1 As label:
+                Align: =Align.Center
+                Color: =RGBA(199, 252, 119, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =111
+                Size: =25
+                Text: =Text(TimeInSec,"yyyy")
+                Width: =105
+                X: =269
+                Y: =433
+                ZIndex: =23
+
+            Clima_Contenedor_2 As circle:
+                Fill: =RGBA(0, 234, 255, 1)
+                Height: =142
+                Width: =138
+                X: =391
+                Y: =345
+                ZIndex: =24
+
+            Clima_Contenedor_3 As circle:
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =123
+                Width: =125
+                X: =412
+                Y: =354
+                ZIndex: =25
+
+            Clima As label:
+                Align: =Align.Center
+                Color: =RGBA(199, 252, 119, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =68
+                Size: =35
+                Text: =Tiempo_Celsius-273
+                Width: =117
+                X: =399
+                Y: =382
+                ZIndex: =26
+
+            Clima_1 As label:
+                Align: =Align.Center
+                Color: =RGBA(199, 252, 119, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =46
+                Size: =20
+                Text: ="°C"
+                Width: =52
+                X: =467
+                Y: =367
+                ZIndex: =27
+
+            Label4 As label:
+                Align: =Align.Center
+                Color: =RGBA(167, 182, 203, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =67
+                Size: =21
+                Text: =Proper(Text(TimeInSec,"[$-es-ES]dddd"))
+                Width: =205
+                X: =222
+                Y: =158
+                ZIndex: =28
+
+            Rectangle1 As rectangle:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =3
+                Width: =260
+                X: =192
+                Y: =34
+                ZIndex: =29
+
+            Rectangle1_2 As rectangle:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =3
+                Width: =260
+                X: =192
+                Y: =71
+                ZIndex: =30
+
+            Rectangle1_3 As rectangle:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =3
+                Width: =260
+                X: =192
+                Y: =618
+                ZIndex: =31
+
+            Rectangle1_4 As rectangle:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =3
+                Width: =260
+                X: =192
+                Y: =656
+                ZIndex: =32
+
+            Label5 As label:
+                Color: =RGBA(199, 252, 119, 1)
+                Height: =45
+                Text: ="dia/mes"
+                Width: =92
+                X: =154
+                Y: =413
+                ZIndex: =33
+
+            Label5_1 As label:
+                Color: =RGBA(199, 252, 119, 1)
+                Height: =41
+                Text: ="año"
+                Width: =53
+                X: =338
+                Y: =494
+                ZIndex: =34
+
+            Label5_2 As label:
+                Color: =RGBA(199, 252, 119, 1)
+                Height: =41
+                Text: ="temp"
+                Width: =53
+                X: =464
+                Y: =427
+                ZIndex: =35
+
+    Icon10 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: |-
+            =Navigate(Portada,ScreenTransition.CoverRight);UpdateContext({resetearControles:true});UpdateContext({resetearControles:false})
+        X: =15
+        Y: =12
+        ZIndex: =4
+

@@ -1,0 +1,139 @@
+Portada As screen:
+    BackgroundImage: =Mapa_Coordenadas
+    ImagePosition: =ImagePosition.Fill
+
+    Rectangle1_6 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =72
+        Width: =89
+        X: =118
+        Y: =680
+        ZIndex: =1
+
+    Rectangle1_5 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =72
+        Width: =89
+        X: =118
+        Y: =555
+        ZIndex: =2
+
+    Button3 As button:
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(152, 208, 70, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =84
+        OnSelect: |+
+            =Navigate(Datos_Usuario,ScreenTransition.Fade);
+            Set(_api_key,"bbaa8e52768935b19b3e9c68946981bf");
+            Set(Respuesta,PowerApp_Tiempo.Run(Location.Latitude,Location.Longitude,_api_key));
+            Set(Tiempo_Celsius, Left(Respuesta.salida,3));
+            
+            
+        Size: =24
+        Text: ="Registrar Asistencia"
+        Width: =306
+        X: =197
+        Y: =548
+        ZIndex: =3
+
+    Button3_1 As button:
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(152, 208, 70, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =84
+        Size: =24
+        Text: ="Ver Asistencia"
+        Width: =306
+        X: =197
+        Y: =672
+        ZIndex: =4
+
+    Icon1 As icon.Database:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =72
+        Icon: =Icon.Database
+        Width: =58
+        X: =133
+        Y: =555
+        ZIndex: =5
+
+    Icon1_1 As icon.Database:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =60
+        Icon: =Icon.View
+        Width: =52
+        X: =129
+        Y: =684
+        ZIndex: =6
+
+    Rectangle2 As rectangle:
+        BorderColor: =RGBA(39, 67, 125, 1)
+        Fill: =RGBA(0, 13, 75, 1)
+        Height: =120
+        Width: =640
+        ZIndex: =7
+
+    Label3 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =120
+        Size: =24
+        Text: |-
+            ="UNIVERSIDAD NACIONAL
+            FEDERICO VILLARREAL"
+        Width: =433
+        ZIndex: =8
+
+    Image1_1 As image:
+        Image: =logo_unfv
+        Width: =196
+        X: =444
+        Y: =10
+        ZIndex: =9
+
+    Image6_9 As image:
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =123
+        Image: =OCGTI
+        Width: =640
+        Y: =1013
+        ZIndex: =10
+
+    Rectangle1_1 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =124
+        Width: =360
+        X: =217
+        Y: =167
+        ZIndex: =11
+
+    Nombre_1 As label:
+        AutoHeight: =true
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =107
+        Size: =21
+        Text: =User().FullName
+        Width: =307
+        X: =238
+        Y: =193
+        ZIndex: =12
+
+    Image1_2 As image:
+        Height: =124
+        Image: =User().Image
+        Width: =124
+        X: =93
+        Y: =167
+        ZIndex: =13
+

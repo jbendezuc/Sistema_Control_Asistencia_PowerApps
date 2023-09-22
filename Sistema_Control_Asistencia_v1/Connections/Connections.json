@@ -1,0 +1,79 @@
+{
+  "05e9ed29-6910-4497-9363-5f121bd697a1": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Usuarios de Office 365",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/henryorsborn/partial-builds/asev3migrations-with-resourceTemplate/1.0.1653.3403/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "UsuariosdeOffice365"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "05e9ed29-6910-4497-9363-5f121bd697a1"
+  },
+  "14a1bd37-ed99-4827-b5a6-7e032ce2398e": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read",
+      "providers/PowerPlatform.Governance/Operations/Write"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1654/1.0.1654.3414/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://unfvpe.sharepoint.com/sites/OCGTI_FileServer/Asistencia": {
+        "dataSources": {
+          "ASISTENCIA_2023": {
+            "tableName": "fe11e7f5-8b80-43a1-b5a1-80ecace37063"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "ASISTENCIA_2023"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "14a1bd37-ed99-4827-b5a6-7e032ce2398e"
+  },
+  "e06918c7-f64f-43c5-b543-61e84db5cace": {
+    "appActions": [
+      "Run"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Flujos lógicos",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "cc0b093c-c957-48ff-897e-e51f02f8bb32"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "cc0b093c-c957-48ff-897e-e51f02f8bb32"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "PowerApp_Tiempo"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "e06918c7-f64f-43c5-b543-61e84db5cace"
+  }
+}
