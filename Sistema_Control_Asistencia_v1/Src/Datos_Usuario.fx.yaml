@@ -251,6 +251,23 @@
                         longitudmaxima_SL07,
                         -77.04932
                     );
+                    //UBICACION LOCAL 08
+                    Set(
+                        latitudminima_SL08,
+                        -12.05185
+                    );
+                    Set(
+                        latitudmaxima_SL08,
+                        -12.05271
+                    );
+                    Set(
+                        longitudminima_SL08,
+                        -77.04342
+                    );
+                    Set(
+                        longitudmaxima_SL08,
+                        -77.04409
+                    );
                     //UBICACION LOCAL 09
                     Set(
                         latitudminima_SL09,
@@ -325,73 +342,80 @@
                         miLatitud <= latitudminima_RECTORADO && miLatitud >= latitudmaxima_RECTORADO && miLongitud <= longitudminima_RECTORADO && miLongitud >= longitudmaxima_RECTORADO,
                         Set(
                             ubicacion,
-                            "RECTORADO"
+                            "SL16"
                         ),
                         If(
                             miLatitud <= latitudminima_SL10 && miLatitud >= latitudmaxima_SL10 && miLongitud <= longitudminima_SL10 && miLongitud >= longitudmaxima_SL10,
                             Set(
                                 ubicacion,
-                                "LOCAL 10"
+                                "SL10"
                             ),If(
                             miLatitud <= latitudminima_SL09 && miLatitud >= latitudmaxima_SL09 && miLongitud <= longitudminima_SL09 && miLongitud >= longitudmaxima_SL09,
                             Set(
                                 ubicacion,
-                                "LOCAL 09"
+                                "SL09"
                             ),If(
                             miLatitud <= latitudminima_SL14 && miLatitud >= latitudmaxima_SL14 && miLongitud <= longitudminima_SL14 && miLongitud >= longitudmaxima_SL14,
                             Set(
                                 ubicacion,
-                                "LOCAL 14"
+                                "SL14"
                             ),If(
                             miLatitud <= latitudminima_SL01 && miLatitud >= latitudmaxima_SL01 && miLongitud <= longitudminima_SL01 && miLongitud >= longitudmaxima_SL01,
                             Set(
                                 ubicacion,
-                                "LOCAL 01"
+                                "SL01"
                             ),
                             If(
                             miLatitud <= latitudminima_SL02 && miLatitud >= latitudmaxima_SL02 && miLongitud <= longitudminima_SL02 && miLongitud >= longitudmaxima_SL02,
                             Set(
                                 ubicacion,
-                                "LOCAL 02"
+                                "SL02"
                             ),
                             If(
                             miLatitud <= latitudminima_SL03 && miLatitud >= latitudmaxima_SL03 && miLongitud <= longitudminima_SL03 && miLongitud >= longitudmaxima_SL03,
                             Set(
                                 ubicacion,
-                                "LOCAL 03"
+                                "SL03"
                             ),
                             If(
                             miLatitud <= latitudminima_SL04 && miLatitud >= latitudmaxima_SL04 && miLongitud <= longitudminima_SL04 && miLongitud >= longitudmaxima_SL04,
                             Set(
                                 ubicacion,
-                                "LOCAL 04"
+                                "SL04"
                             ),
                             If(
                             miLatitud <= latitudminima_SL05 && miLatitud >= latitudmaxima_SL05 && miLongitud <= longitudminima_SL05 && miLongitud >= longitudmaxima_SL05,
                             Set(
                                 ubicacion,
-                                "LOCAL 05"
+                                "SL05"
                             ),
                             If(
                             miLatitud <= latitudminima_SL06 && miLatitud >= latitudmaxima_SL06 && miLongitud <= longitudminima_SL06 && miLongitud >= longitudmaxima_SL06,
                             Set(
                                 ubicacion,
-                                "LOCAL 06"
+                                "SL06"
                             ),
                             If(
                             miLatitud <= latitudminima_SL07 && miLatitud >= latitudmaxima_SL07 && miLongitud <= longitudminima_SL07 && miLongitud >= longitudmaxima_SL07,
                             Set(
                                 ubicacion,
-                                "LOCAL 07"
+                                "SL07"
+                            ),
+                            If(
+                            miLatitud <= latitudminima_SL08 && miLatitud >= latitudmaxima_SL08 && miLongitud <= longitudminima_SL08 && miLongitud >= longitudmaxima_SL08,
+                            Set(
+                                ubicacion,
+                                "SL08"
                             ),
                         Set(
                             ubicacion,
                             "LEJOS DEL LOCAL"
                         )
-                    )))))))))));
+                    ))))))))))));
                     //ESTADO DE LA ASISTENCIA
-                    If(ubicacion = "LOCAL 07",Set(estado,"ASISTIO"),Set(estado,"FALTO"));
-                    
+                    /*
+                    If(ubicacion = "SL01" || ubicacion = "SL02" || ubicacion = "SL03" || ubicacion = "SL04" || ubicacion = "SL05" || ubicacion = "SL06" || ubicacion = "SL07" || ubicacion = "SL08" || ubicacion = "SL09" || ubicacion = "SL10" || ubicacion = "SL12" || ubicacion = "SL14" || ubicacion = "SL16";If(Text(TimeInSec;"[$-en-US]hh:mm tt")<= "08:20";Set(estado;"ASISTIO");Set(estado;"TARDE"));Set(estado;"FALTO"));;
+                    */
                     //REGISTRO DE ASISTENCIA
                     Patch(
                         ASISTENCIA_2023,
@@ -402,7 +426,7 @@
                             LOCAL: Local.Text,
                             FECHA: Text(TimeInSec,"dd/mm/yyyy"),
                             HORA: Text(TimeInSec,"[$-en-US]hh:mm:ss AM/PM"),
-                            ESTADO:estado,
+                            //ESTADO:estado;
                             LATITUD:miLatitud,
                             LONGITUD:miLongitud
                         }
