@@ -50,6 +50,7 @@ Portada As screen:
             If(horas >= 19 && horas <= 23,Set(fechaAnterior,Text(DateAdd(fecha_api,-1,TimeUnit.Days),"dd/mm/yyyy")),Set(fechaAnterior,fecha_api)); 
             Set(dia,Day(fechaAnterior));
             Set(mes,Month(fechaAnterior));
+            Set(ano,Year(fechaAnterior));
         Size: =24
         Text: ="Registrar Asistencia"
         Width: =306

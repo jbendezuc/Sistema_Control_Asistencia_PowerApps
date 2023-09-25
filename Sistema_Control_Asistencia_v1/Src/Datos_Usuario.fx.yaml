@@ -607,7 +607,7 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =111
                 Size: =25
-                Text: =Text(TimeInSec,"yyyy")
+                Text: =ano
                 Width: =105
                 X: =269
                 Y: =433
