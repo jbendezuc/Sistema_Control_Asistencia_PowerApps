@@ -27,13 +27,13 @@ Portada As screen:
         Fill: =RGBA(152, 208, 70, 1)
         FontWeight: =FontWeight.Bold
         Height: =84
-        OnSelect: |+
+        OnSelect: |-
             =Navigate(Datos_Usuario,ScreenTransition.Fade);
             Set(_api_key,"bbaa8e52768935b19b3e9c68946981bf");
             Set(Respuesta,PowerApp_Tiempo.Run(Location.Latitude,Location.Longitude,_api_key));
             Set(Tiempo_Celsius, Left(Respuesta.salida,3));
             
-            
+            Set(prueba,Text(DateAdd(Date(1970,1,1),RoundUp(Respuesta.fecha_hora,0),TimeUnit.Seconds),"[$-es-ES]dddd, dd MMMM yyyy hh:mm"));
         Size: =24
         Text: ="Registrar Asistencia"
         Width: =306
@@ -47,11 +47,13 @@ Portada As screen:
         Fill: =RGBA(152, 208, 70, 1)
         FontWeight: =FontWeight.Bold
         Height: =84
-        OnSelect: |-
+        OnSelect: |+
             =
             If(IsBlank(LookUp(ASISTENCIA_2023,CORREO_TECNICO = User().Email && FECHA = Text(TimeInSec,"dd/mm/yyyy") )),Set(mensaje,"no existe"),Set(mensaje,"ya existe"))
+            
             //IsBlank(LookUp(ASISTENCIA_2023;CORREO_TECNICO = User().Email))
             //Text(TimeInSec;"dd/mm/yyyy")
+            
         Size: =24
         Text: ="Ver Asistencia"
         Width: =306
@@ -145,7 +147,7 @@ Portada As screen:
     Label1 As label:
         Height: =70
         Size: =21
-        Text: =mensaje
+        Text: =prueba
         Width: =560
         X: =40
         Y: =877

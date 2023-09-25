@@ -74,6 +74,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.mensaje"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.mensaje",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "mensaje",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.Fondo"
                 }
               ],
@@ -97,7 +127,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -127,7 +157,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -157,7 +187,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -187,7 +217,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
+          "ruleIndex": 2
         }
       ],
       "tool": {
@@ -230,23 +260,6 @@
               }
             },
             {
-              "id": "app-UnusedMediaResources",
-              "messageStrings": {
-                "issue": {
-                  "text": "Archivos multimedia sin usar"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Quite el archivo multimedia que no se use en el panel Medios."
-                ],
-                "level": "Medium",
-                "primaryCategory": "performance",
-                "whyFix": "No hay ninguna fórmula de control que haga referencia a este archivo multimedia, por lo que no es necesario. Si se quita, mejorará el rendimiento."
-              }
-            },
-            {
               "id": "app-UnusedVariables",
               "messageStrings": {
                 "issue": {
@@ -261,6 +274,23 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "Esta variable está declarada, pero ningún control hace referencia a ella, por lo que no es necesaria."
+              }
+            },
+            {
+              "id": "app-UnusedMediaResources",
+              "messageStrings": {
+                "issue": {
+                  "text": "Archivos multimedia sin usar"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Quite el archivo multimedia que no se use en el panel Medios."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "No hay ninguna fórmula de control que haga referencia a este archivo multimedia, por lo que no es necesario. Si se quita, mejorará el rendimiento."
               }
             }
           ],
