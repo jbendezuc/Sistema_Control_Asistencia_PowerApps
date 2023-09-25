@@ -435,9 +435,22 @@
                             "LEJOS DEL LOCAL"
                         )
                     )))))))))))));
+                    
+                    //PETICION NUEVAMENTE DE HORA - API VALIDA
+                    Set(Respuesta,PowerApp_Tiempo.Run(Location.Latitude,Location.Longitude,_api_key));
+                    Set(hora_api,Text(DateAdd(Date(1970,1,1),RoundUp(Respuesta.fecha_hora,0),TimeUnit.Seconds),"hh:mm"));
+                    
+                    Set(horaTexto, hora_api); // Reemplaza con la hora obtenida de Respuesta.fecha_hora
+                    Set(horas, Mod(Value(Left(horaTexto, 2))-5,24)); // Extraer horas como número
+                    Set(minutos, Value(Right(horaTexto, 2))); // Extraer minutos como número
+                    
+                    // HORA API VALIDA
+                    Set(horacompleta,Text(horas,"00") & ":" & Text(minutos,"00")); 
+                    
+                    
                     //ESTADO DE LA ASISTENCIA
                     
-                    Set(HoraActual, Now());
+                    Set(HoraActual, horacompleta);
                     Set(HoraLimite, Text("08:15 AM", "[$-es-ES]hh:mm"));
                     
                     If(ubicacion = "SL01" || ubicacion = "SL02" || ubicacion = "SL03" || ubicacion = "SL04" || ubicacion = "SL05" || ubicacion = "SL06" || ubicacion = "SL07" || ubicacion = "SL08" || ubicacion = "SL09" || ubicacion = "SL10" || ubicacion = "SL12" || ubicacion = "SL14" || ubicacion = "SL16",If(Hour(HoraActual) * 60 + Minute(HoraActual) < Hour(HoraLimite) * 60 + Minute(HoraLimite), Set(estado, "ASISTIO"), Set(estado, "TARDE")),Set(estado,"FALTO"));
@@ -450,8 +463,9 @@
                             TECNICO: Nombre_Tecnico.Text,
                             CORREO_TECNICO: User().Email,
                             LOCAL: Local.Text,
-                            FECHA: Text(TimeInSec,"dd/mm/yyyy"),
-                            HORA_INGRESO: Text(TimeInSec,"[$-en-US]hh:mm:ss AM/PM"),
+                            FECHA: fechaAnterior,
+                            HORA_INGRESO: horacompleta,
+                            //HORA_INGRESO: Text(TimeInSec;"[$-en-US]hh:mm:ss AM/PM");
                             ESTADO:estado,
                             LATITUD:miLatitud,
                             LONGITUD:miLongitud

@@ -27,7 +27,7 @@ Portada As screen:
         Fill: =RGBA(152, 208, 70, 1)
         FontWeight: =FontWeight.Bold
         Height: =84
-        OnSelect: |-
+        OnSelect: |
             =Navigate(Datos_Usuario,ScreenTransition.Fade);
             
             //Conexion API
