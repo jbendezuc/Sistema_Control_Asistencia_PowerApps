@@ -47,8 +47,11 @@ Portada As screen:
         Fill: =RGBA(152, 208, 70, 1)
         FontWeight: =FontWeight.Bold
         Height: =84
-        OnSelect: |
+        OnSelect: |-
             =
+            If(IsBlank(LookUp(ASISTENCIA_2023,CORREO_TECNICO = User().Email && FECHA = Text(TimeInSec,"dd/mm/yyyy") )),Set(mensaje,"no existe"),Set(mensaje,"ya existe"))
+            //IsBlank(LookUp(ASISTENCIA_2023;CORREO_TECNICO = User().Email))
+            //Text(TimeInSec;"dd/mm/yyyy")
         Size: =24
         Text: ="Ver Asistencia"
         Width: =306
@@ -138,4 +141,13 @@ Portada As screen:
         X: =93
         Y: =167
         ZIndex: =13
+
+    Label1 As label:
+        Height: =70
+        Size: =21
+        Text: =mensaje
+        Width: =560
+        X: =40
+        Y: =877
+        ZIndex: =14
 

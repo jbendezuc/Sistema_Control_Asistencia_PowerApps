@@ -451,7 +451,7 @@
                             CORREO_TECNICO: User().Email,
                             LOCAL: Local.Text,
                             FECHA: Text(TimeInSec,"dd/mm/yyyy"),
-                            HORA: Text(TimeInSec,"[$-en-US]hh:mm:ss AM/PM"),
+                            HORA_INGRESO: Text(TimeInSec,"[$-en-US]hh:mm:ss AM/PM"),
                             ESTADO:estado,
                             LATITUD:miLatitud,
                             LONGITUD:miLongitud
