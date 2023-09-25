@@ -29,21 +29,23 @@ Portada As screen:
         Height: =84
         OnSelect: |
             =Navigate(Datos_Usuario,ScreenTransition.Fade);
+            
+            //Conexion API
             Set(_api_key,"bbaa8e52768935b19b3e9c68946981bf");
             Set(Respuesta,PowerApp_Tiempo.Run(Location.Latitude,Location.Longitude,_api_key));
             Set(Tiempo_Celsius, Left(Respuesta.salida,3));
             
-            //VALIDACION DE FECHA
+            //VALIDACION DE FECHA Y HORA
             Set(fecha_api,Text(DateAdd(Date(1970,1,1),RoundUp(Respuesta.fecha_hora,0),TimeUnit.Seconds),"[$-es-ES]dd/mm/yyyy"));
             Set(hora_api,Text(DateAdd(Date(1970,1,1),RoundUp(Respuesta.fecha_hora,0),TimeUnit.Seconds),"hh:mm"));
             
             Set(horaTexto, hora_api); // Reemplaza con la hora obtenida de Respuesta.fecha_hora
-            Set(horas, Value(Left(horaTexto, 2)-5)); // Extraer horas como número
+            Set(horas, Mod(Value(Left(horaTexto, 2))-5,24)); // Extraer horas como número
             Set(minutos, Value(Right(horaTexto, 2))); // Extraer minutos como número
             
-            Set(horacompleta,Text(horas,"00") & ":" & Text(minutos,"00")); // Fecha unida
+            Set(horacompleta,Text(horas,"00") & ":" & Text(minutos,"00")); // Hora API unida
             
-            If(horas < 19 || (horas = 19 && minutos <=30),Set(fechaAnterior,Text(DateAdd(fecha_api,-1,TimeUnit.Days),"dd/mm/yyyy")),Set(fechaAnterior,fecha_api));
+            If(horas < 2 || (horas = 2 && minutos <=30),Set(fechaAnterior,Text(DateAdd(fecha_api,-1,TimeUnit.Days),"dd/mm/yyyy")),Set(fechaAnterior,fecha_api)); //Fecha API valida
         Size: =24
         Text: ="Registrar Asistencia"
         Width: =306
