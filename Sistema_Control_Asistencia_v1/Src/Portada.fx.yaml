@@ -33,7 +33,7 @@ Portada As screen:
             Set(Respuesta,PowerApp_Tiempo.Run(Location.Latitude,Location.Longitude,_api_key));
             Set(Tiempo_Celsius, Left(Respuesta.salida,3));
             
-            Set(prueba,Text(DateAdd(Date(1970,1,1),RoundUp(Respuesta.fecha_hora,0),TimeUnit.Seconds)-(5*TimeUnit.Hours),"[$-es-ES]dd/mm/yyyy hh:mm"));
+            Set(prueba,Text(DateAdd(Date(1970,1,1),RoundUp(Respuesta.fecha_hora,0),TimeUnit.Seconds)-(5),"[$-es-ES]dd/mm/yyyy hh:mm"));
         Size: =24
         Text: ="Registrar Asistencia"
         Width: =306
