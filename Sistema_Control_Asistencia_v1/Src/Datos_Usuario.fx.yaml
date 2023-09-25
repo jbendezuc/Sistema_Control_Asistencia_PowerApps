@@ -577,12 +577,12 @@
                 Align: =Align.Center
                 Color: =RGBA(199, 252, 119, 1)
                 FontWeight: =FontWeight.Semibold
-                Height: =111
+                Height: =77
                 Size: =20
-                Text: =Text(TimeInSec,"dd/mm")
+                Text: =dia&"/"&mes
                 Width: =105
                 X: =113
-                Y: =357
+                Y: =365
                 ZIndex: =20
 
             Ano_Contenedor As circle:

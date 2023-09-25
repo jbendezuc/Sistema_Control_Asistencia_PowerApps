@@ -27,7 +27,7 @@ Portada As screen:
         Fill: =RGBA(152, 208, 70, 1)
         FontWeight: =FontWeight.Bold
         Height: =84
-        OnSelect: |
+        OnSelect: |-
             =Navigate(Datos_Usuario,ScreenTransition.Fade);
             
             //Conexion API
@@ -43,9 +43,13 @@ Portada As screen:
             Set(horas, Mod(Value(Left(horaTexto, 2))-5,24)); // Extraer horas como número
             Set(minutos, Value(Right(horaTexto, 2))); // Extraer minutos como número
             
-            Set(horacompleta,Text(horas,"00") & ":" & Text(minutos,"00")); // Hora API unida
+            // HORA API VALIDA
+            Set(horacompleta,Text(horas,"00") & ":" & Text(minutos,"00")); 
             
-            If(horas >= 19 && horas <= 23,Set(fechaAnterior,Text(DateAdd(fecha_api,-1,TimeUnit.Days),"dd/mm/yyyy")),Set(fechaAnterior,fecha_api)); //Fecha API valida
+            // FECHA API VALIDA
+            If(horas >= 19 && horas <= 23,Set(fechaAnterior,Text(DateAdd(fecha_api,-1,TimeUnit.Days),"dd/mm/yyyy")),Set(fechaAnterior,fecha_api)); 
+            Set(dia,Day(fechaAnterior));
+            Set(mes,Month(fechaAnterior));
         Size: =24
         Text: ="Registrar Asistencia"
         Width: =306
