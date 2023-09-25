@@ -33,13 +33,17 @@ Portada As screen:
             Set(Respuesta,PowerApp_Tiempo.Run(Location.Latitude,Location.Longitude,_api_key));
             Set(Tiempo_Celsius, Left(Respuesta.salida,3));
             
-            //Set(prueba;Text(DateAdd(Date(1970;1;1);RoundUp(Respuesta.fecha_hora;0);TimeUnit.Seconds);"[$-es-ES]dd/mm/yyyy hh:mm"));;
+            //VALIDACION DE FECHA
+            Set(fecha_api,Text(DateAdd(Date(1970,1,1),RoundUp(Respuesta.fecha_hora,0),TimeUnit.Seconds),"[$-es-ES]dd/mm/yyyy"));
+            Set(hora_api,Text(DateAdd(Date(1970,1,1),RoundUp(Respuesta.fecha_hora,0),TimeUnit.Seconds),"hh:mm"));
             
-            Set(prueba,Text(DateAdd(Date(1970,1,1),RoundUp(Respuesta.fecha_hora,0),TimeUnit.Seconds),"hh:mm"));
-            
-            Set(horaTexto, prueba); // Reemplaza con la hora obtenida de Respuesta.fecha_hora
+            Set(horaTexto, hora_api); // Reemplaza con la hora obtenida de Respuesta.fecha_hora
             Set(horas, Value(Left(horaTexto, 2)-5)); // Extraer horas como número
             Set(minutos, Value(Right(horaTexto, 2))); // Extraer minutos como número
+            
+            Set(horacompleta,Text(horas,"00") & ":" & Text(minutos,"00")); // Fecha unida
+            
+            If(horas < 19 || (horas = 19 && minutos <=30),Set(fechaAnterior,Text(DateAdd(fecha_api,-1,TimeUnit.Days),"dd/mm/yyyy")),Set(fechaAnterior,fecha_api));
         Size: =24
         Text: ="Registrar Asistencia"
         Width: =306
@@ -153,7 +157,7 @@ Portada As screen:
     Label1 As label:
         Height: =70
         Size: =21
-        Text: =horas
+        Text: =fechaAnterior
         Width: =560
         X: =40
         Y: =877

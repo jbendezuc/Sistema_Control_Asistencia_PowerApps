@@ -74,17 +74,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.minutos"
+                  "fullyQualifiedName": "App.horacompleta"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.minutos",
+                  "fullyQualifiedName": "App.horacompleta",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "minutos",
+                "member": "horacompleta",
                 "module": "App",
                 "type": "App"
               }
