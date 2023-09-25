@@ -45,7 +45,7 @@ Portada As screen:
             
             Set(horacompleta,Text(horas,"00") & ":" & Text(minutos,"00")); // Hora API unida
             
-            If(horas < 2 || (horas = 2 && minutos <=30),Set(fechaAnterior,Text(DateAdd(fecha_api,-1,TimeUnit.Days),"dd/mm/yyyy")),Set(fechaAnterior,fecha_api)); //Fecha API valida
+            If(horas >= 19 && horas <= 23,Set(fechaAnterior,Text(DateAdd(fecha_api,-1,TimeUnit.Days),"dd/mm/yyyy")),Set(fechaAnterior,fecha_api)); //Fecha API valida
         Size: =24
         Text: ="Registrar Asistencia"
         Width: =306
