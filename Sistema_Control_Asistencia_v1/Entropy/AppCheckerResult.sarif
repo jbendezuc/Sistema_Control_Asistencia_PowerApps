@@ -74,6 +74,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.minutos_2"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.minutos_2",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "minutos_2",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.horas_2"
                 }
               ],
@@ -145,66 +175,6 @@
               },
               "properties": {
                 "member": "hora_api_2",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.mensaje"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.mensaje",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "mensaje",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.minutos_2"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.minutos_2",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "minutos_2",
                 "module": "App",
                 "type": "App"
               }

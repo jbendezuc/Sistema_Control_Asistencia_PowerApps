@@ -47,10 +47,10 @@ Portada As screen:
             Set(horacompleta,Text(horas,"00") & ":" & Text(minutos,"00")); 
             
             // FECHA API VALIDA
-            If(horas >= 19 && horas <= 23,Set(fechaAnterior,Text(DateAdd(fecha_api,-1,TimeUnit.Days),"dd/mm/yyyy")),Set(fechaAnterior,fecha_api)); 
-            Set(dia,Day(fechaAnterior));
-            Set(mes,Month(fechaAnterior));
-            Set(ano,Year(fechaAnterior));
+            If(horas >= 19 && horas <= 23,Set(fechaActual,Text(DateAdd(fecha_api,-1,TimeUnit.Days),"dd/mm/yyyy")),Set(fechaActual,fecha_api)); 
+            Set(dia,Day(fechaActual));
+            Set(mes,Month(fechaActual));
+            Set(ano,Year(fechaActual));
         Size: =24
         Text: ="Registrar Asistencia"
         Width: =306
@@ -64,13 +64,8 @@ Portada As screen:
         Fill: =RGBA(152, 208, 70, 1)
         FontWeight: =FontWeight.Bold
         Height: =84
-        OnSelect: |+
+        OnSelect: |
             =
-            If(IsBlank(LookUp(ASISTENCIA_2023,CORREO_TECNICO = User().Email && FECHA = Text(TimeInSec,"dd/mm/yyyy") )),Set(mensaje,"no existe"),Set(mensaje,"ya existe"))
-            
-            //IsBlank(LookUp(ASISTENCIA_2023;CORREO_TECNICO = User().Email))
-            //Text(TimeInSec;"dd/mm/yyyy")
-            
         Size: =24
         Text: ="Ver Asistencia"
         Width: =306
@@ -164,7 +159,7 @@ Portada As screen:
     Label1 As label:
         Height: =70
         Size: =21
-        Text: =fechaAnterior
+        Text: =fechaActual
         Width: =560
         X: =40
         Y: =877
