@@ -553,11 +553,11 @@
 
             Adjuntar_Foto As label:
                 FontWeight: =FontWeight.Bold
-                Height: =44
+                Height: =46
                 Size: =20
                 Text: |-
-                    ="Adjuntar Foto:"
-                Width: =232
+                    ="Adjuntar foto:"
+                Width: =330
                 X: =44
                 Y: =783
                 ZIndex: =13
