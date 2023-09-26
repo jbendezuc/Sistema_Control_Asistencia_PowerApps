@@ -66,7 +66,7 @@ Lista_Asistencia As screen:
             AccessibleLabel: =Self.Tooltip
             Height: =104
             Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent);Navigate(Detalle_Asistencia,ScreenTransition.Cover);Set(varMiAsistencia,ThisItem)
+            OnSelect: =Select(Parent);Navigate(Detalle_Asistencia,ScreenTransition.Cover);Set(varMiAsistencia,ThisItem);Set(detalle,"1")
             PaddingBottom: =16
             PaddingLeft: =16
             PaddingRight: =16

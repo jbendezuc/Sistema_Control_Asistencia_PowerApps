@@ -338,7 +338,10 @@
     Arrow1_1 As arrow.backArrow:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =66
-        OnSelect: =Navigate(Portada,ScreenTransition.CoverRight)
+        OnSelect: |-
+            =
+            If(detalle = "1",
+            Navigate(Lista_Asistencia,ScreenTransition.CoverRight),Navigate(Lista_Asistencia_Admin,ScreenTransition.CoverRight))
         Width: =66
         X: =30
         Y: =12

@@ -15,7 +15,7 @@ Lista_Asistencia_Admin As screen:
                 Sort(Filter(
                     ASISTENCIA_2023,
                     FECHA = Fecha_Actual.Text,
-                    StartsWith(FECHA,BuscarMiAsistencia_1.Text) || StartsWith(LOCAL_INGRESO,BuscarMiAsistencia_1.Text)
+                    StartsWith(FECHA,BuscarMiAsistencia_1.Text) || StartsWith(LOCAL_INGRESO,BuscarMiAsistencia_1.Text) || StartsWith(CORREO_TECNICO,BuscarMiAsistencia_1.Text)
                 ),ID,SortOrder.Descending),
                 ASISTENCIA_2023
             )
@@ -66,7 +66,7 @@ Lista_Asistencia_Admin As screen:
             AccessibleLabel: =Self.Tooltip
             Height: =104
             Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent);Navigate(Detalle_Asistencia,ScreenTransition.Cover);Set(varMiAsistencia,ThisItem)
+            OnSelect: =Select(Parent);Navigate(Detalle_Asistencia,ScreenTransition.Cover);Set(varMiAsistencia,ThisItem);Set(detalle,"2")
             PaddingBottom: =16
             PaddingLeft: =16
             PaddingRight: =16
@@ -191,11 +191,11 @@ Lista_Asistencia_Admin As screen:
     Label10_1 As label:
         Color: =RGBA(255, 255, 255, 1)
         FontWeight: =FontWeight.Bold
-        Height: =70
+        Height: =67
         Size: =27
-        Text: ="LISTA DE ASISTENCIA"
-        Width: =389
-        X: =135
+        Text: ="ASISTENCIA "&fechaActual
+        Width: =493
+        X: =106
         Y: =5
         ZIndex: =4
 
@@ -203,7 +203,7 @@ Lista_Asistencia_Admin As screen:
         Default: =""
         Height: =64
         HintText: |-
-            ="Busca por fecha ##/##/## Ó SL##"
+            ="Busca por Correo Ó SL##"
         HoverFill: =RGBA(209, 232, 178, 1)
         Size: =21
         Width: =614

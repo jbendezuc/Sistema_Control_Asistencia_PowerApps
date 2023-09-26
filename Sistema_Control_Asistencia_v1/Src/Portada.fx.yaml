@@ -28,13 +28,13 @@ Portada As screen:
         FontWeight: =FontWeight.Bold
         Height: =84
         OnSelect: |
-            =Navigate(Datos_Usuario,ScreenTransition.Fade);
+            =Navigate(Datos_Usuario,ScreenTransition.Cover);
             
             //Conexion API
-            /*
-            Set(_api_key;"bbaa8e52768935b19b3e9c68946981bf");;
-            Set(Respuesta;PowerApp_Tiempo.Run(Location.Latitude;Location.Longitude;_api_key));;
-            */
+            
+            Set(_api_key,"bbaa8e52768935b19b3e9c68946981bf");
+            Set(Respuesta,PowerApp_Tiempo.Run(Location.Latitude,Location.Longitude,_api_key));
+            
             //CLIMA API
             Set(Tiempo_Celsius, Left(Respuesta.salida,3));
             
@@ -184,7 +184,12 @@ Portada As screen:
         FontWeight: =FontWeight.Bold
         Height: =84
         OnSelect: |
-            =//VALIDACION DE FECHA Y HORA
+            =
+            Set(_api_key,"bbaa8e52768935b19b3e9c68946981bf");
+            Set(Respuesta,PowerApp_Tiempo.Run(Location.Latitude,Location.Longitude,_api_key));
+            
+            
+            //VALIDACION DE FECHA Y HORA
             Set(fecha_api,Text(DateAdd(Date(1970,1,1),RoundUp(Respuesta.fecha_hora,0),TimeUnit.Seconds),"[$-es-ES]dd/mm/yyyy"));
             
             // FECHA API VALIDA
