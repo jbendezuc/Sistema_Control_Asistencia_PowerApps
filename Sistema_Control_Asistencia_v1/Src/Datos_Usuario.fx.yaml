@@ -745,7 +745,7 @@
                     =Hour(horacompleta)&":"&Minute(horacompleta)
                 Width: =560
                 X: =30
-                Y: =572
+                Y: =624
                 ZIndex: =36
 
     Icon10 As icon.BackArrow:
