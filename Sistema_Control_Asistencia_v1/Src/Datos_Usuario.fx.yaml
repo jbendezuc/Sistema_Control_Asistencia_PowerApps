@@ -801,6 +801,7 @@
                 ZIndex: =37
 
                 UploadedImage1 As image:
+                    BorderThickness: =2
                     Height: =AddMediaButton1.Height
                     Image: =If(IsBlank(AddMediaButton1.Media), SampleImage, AddMediaButton1.Media)
                     ImagePosition: =ImagePosition.Fill
@@ -811,6 +812,7 @@
                     ZIndex: =38
 
                 AddMediaButton1 As addMedia:
+                    BorderThickness: =2
                     Height: =432
                     Size: =25
                     Text: ="Agregar foto del reloj en el local que se encuentra"
