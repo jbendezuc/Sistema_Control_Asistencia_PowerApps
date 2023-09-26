@@ -63,7 +63,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/25/2023 22:42:39",
+  "HeaderLastSavedDateTimeUTC": "09/26/2023 14:15:13",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "05e9ed29-6910-4497-9363-5f121bd697a1": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/8c8ea0a82a4443aa9be2128acf48e277\"",
@@ -81,13 +81,13 @@
     "oro viejo": "e7275789-4398-43cf-a865-61634093a2fb.jpg"
   },
   "LocalResourceRootPaths": {
-    "Autumn": "https://docserverpwaprodeus.blob.core.windows.net/5028061c-5c5b-4728-bdfd-41bf3c5ed4f4-1/resource/Assets0Images00768e3a7-7279-456b-813a-93eb259ba549.jpg?sv=2018-03-28&sr=b&sig=mxKkNXyLJ9FKo18jJ8MLwiAOSiGTGTfWeKMk7cgWLw0%3D&spr=https&se=2023-09-26T22%3A25%3A09Z&sp=r",
-    "Fondo": "https://docserverpwaprodeus.blob.core.windows.net/5028061c-5c5b-4728-bdfd-41bf3c5ed4f4-1/resource/Assets0Images077788010-a254-4bda-b8dc-1ad82e8f8edf.jpg?sv=2018-03-28&sr=b&sig=lFnDZZpEzyupFPyR1WvV4C8rIzCbkeZIqTTOuY6fVDU%3D&spr=https&se=2023-09-26T22%3A25%3A09Z&sp=r",
-    "Fondo_Datos": "https://docserverpwaprodeus.blob.core.windows.net/5028061c-5c5b-4728-bdfd-41bf3c5ed4f4-1/resource/Assets0Images0d097e06f-e6cd-4979-9dfe-0a75cd07bdec.jpg?sv=2018-03-28&sr=b&sig=vpje5pRXoej8cujZ0uysWJfwJu1yO1d%2FHPeFZDFwx%2FE%3D&spr=https&se=2023-09-26T22%3A25%3A09Z&sp=r",
-    "logo_unfv": "https://docserverpwaprodeus.blob.core.windows.net/5028061c-5c5b-4728-bdfd-41bf3c5ed4f4-1/resource/Assets0Images0669c05c6-39f5-4e86-94f0-044c6c851895.jpg?sv=2018-03-28&sr=b&sig=P0KM0tGitIOPVU664H0u2jkFGMO36ZubGpma7XKl6uQ%3D&spr=https&se=2023-09-26T22%3A25%3A09Z&sp=r",
-    "Mapa_Coordenadas": "https://docserverpwaprodeus.blob.core.windows.net/5028061c-5c5b-4728-bdfd-41bf3c5ed4f4-1/resource/Assets0Images09ecaa4d9-f2a6-48f7-89c2-7d351dea7af3.png?sv=2018-03-28&sr=b&sig=vphwij7%2BIG1lar%2F0FauRN4ROfBEXaVwRNa%2B1CVLwGzI%3D&spr=https&se=2023-09-26T22%3A25%3A09Z&sp=r",
-    "OCGTI": "https://docserverpwaprodeus.blob.core.windows.net/5028061c-5c5b-4728-bdfd-41bf3c5ed4f4-1/resource/Assets0Images09f2d2448-c829-4fd3-930c-bf68a29ef0d8.png?sv=2018-03-28&sr=b&sig=uyUE12zqU6cW93%2B%2BlIAvfgcTlTAXF5e%2BY8fVKmNdZRw%3D&spr=https&se=2023-09-26T22%3A25%3A09Z&sp=r",
-    "oro viejo": "https://docserverpwaprodeus.blob.core.windows.net/5028061c-5c5b-4728-bdfd-41bf3c5ed4f4-1/resource/Assets0Images0e7275789-4398-43cf-a865-61634093a2fb.jpg?sv=2018-03-28&sr=b&sig=jndFYek%2FUK1LHEag7eQg%2FeI5H1oSZyUoGZT3rMw%2FBJc%3D&spr=https&se=2023-09-26T22%3A25%3A09Z&sp=r"
+    "Autumn": "https://docserverpwaprodeus.blob.core.windows.net/b6e5ac4b-56a7-446c-b151-9f5a93adb66d-1/resource/Assets0Images00768e3a7-7279-456b-813a-93eb259ba549.jpg?sv=2018-03-28&sr=b&sig=DDjKkt1WoQZQE2a5IC2jXFFlQRuCZETVSjuZ1dcxpqE%3D&spr=https&se=2023-09-27T14%3A22%3A21Z&sp=r",
+    "Fondo": "https://docserverpwaprodeus.blob.core.windows.net/b6e5ac4b-56a7-446c-b151-9f5a93adb66d-1/resource/Assets0Images077788010-a254-4bda-b8dc-1ad82e8f8edf.jpg?sv=2018-03-28&sr=b&sig=PVERob5V9Pu3v%2FfhNB6iCMpCOJiDqPQfRWyt0QuJ3F0%3D&spr=https&se=2023-09-27T14%3A22%3A21Z&sp=r",
+    "Fondo_Datos": "https://docserverpwaprodeus.blob.core.windows.net/b6e5ac4b-56a7-446c-b151-9f5a93adb66d-1/resource/Assets0Images0d097e06f-e6cd-4979-9dfe-0a75cd07bdec.jpg?sv=2018-03-28&sr=b&sig=ZAKklkUQ9NjEnoXGropbx9pGlaBcGTe2m4x6Fh2vgBY%3D&spr=https&se=2023-09-27T14%3A22%3A21Z&sp=r",
+    "logo_unfv": "https://docserverpwaprodeus.blob.core.windows.net/b6e5ac4b-56a7-446c-b151-9f5a93adb66d-1/resource/Assets0Images0669c05c6-39f5-4e86-94f0-044c6c851895.jpg?sv=2018-03-28&sr=b&sig=2bRZOTylue%2F1fEEJKpfnrt%2BlRtQuKa%2BqyyOKL4j74B8%3D&spr=https&se=2023-09-27T14%3A22%3A21Z&sp=r",
+    "Mapa_Coordenadas": "https://docserverpwaprodeus.blob.core.windows.net/b6e5ac4b-56a7-446c-b151-9f5a93adb66d-1/resource/Assets0Images09ecaa4d9-f2a6-48f7-89c2-7d351dea7af3.png?sv=2018-03-28&sr=b&sig=tRbXRUVfNG4sCKUjr%2BmVYGXI%2BDex%2FetBBMWISfkeFpA%3D&spr=https&se=2023-09-27T14%3A22%3A21Z&sp=r",
+    "OCGTI": "https://docserverpwaprodeus.blob.core.windows.net/b6e5ac4b-56a7-446c-b151-9f5a93adb66d-1/resource/Assets0Images09f2d2448-c829-4fd3-930c-bf68a29ef0d8.png?sv=2018-03-28&sr=b&sig=sipsr12%2BtH6B3LY9LZWcFNvFvH6hnpqdVVB8MPda7CY%3D&spr=https&se=2023-09-27T14%3A22%3A21Z&sp=r",
+    "oro viejo": "https://docserverpwaprodeus.blob.core.windows.net/b6e5ac4b-56a7-446c-b151-9f5a93adb66d-1/resource/Assets0Images0e7275789-4398-43cf-a865-61634093a2fb.jpg?sv=2018-03-28&sr=b&sig=e%2Bl%2BMMomcUeemV6%2BPOpiEq7uJ3Q5TJLtvJDr2Bfpf2g%3D&spr=https&se=2023-09-27T14%3A22%3A21Z&sp=r"
   },
   "OldLogoFileName": "qghzj3yl.jpg",
   "OrderComponentMetadata": {},
@@ -246,7 +246,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.2753382,
+    "AnalysisLoadTime": 0.3767098,
     "ControlCount": {
       "button": 3,
       "circle": 8,
@@ -260,7 +260,7 @@
       "screen": 2,
       "timer": 1
     },
-    "DeserializationLoadTime": 2.4551129
+    "DeserializationLoadTime": 1.5717285
   },
   "WasLocalDatabaseReferencesEmpty": true
 }

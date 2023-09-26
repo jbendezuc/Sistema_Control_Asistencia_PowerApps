@@ -451,7 +451,7 @@
                     //ESTADO DE LA ASISTENCIA
                     
                     Set(HoraActual, horacompleta);
-                    Set(HoraLimite, Text("08:15 AM", "[$-es-ES]hh:mm"));
+                    Set(HoraLimite, Text("10:15 AM", "[$-es-ES]hh:mm"));
                     
                     If(ubicacion = "SL01" || ubicacion = "SL02" || ubicacion = "SL03" || ubicacion = "SL04" || ubicacion = "SL05" || ubicacion = "SL06" || ubicacion = "SL07" || ubicacion = "SL08" || ubicacion = "SL09" || ubicacion = "SL10" || ubicacion = "SL12" || ubicacion = "SL14" || ubicacion = "SL16",If(Hour(HoraActual) * 60 + Minute(HoraActual) < Hour(HoraLimite) * 60 + Minute(HoraLimite), Set(estado, "ASISTIO"), Set(estado, "TARDE")),Set(estado,"FALTO"));
                     
