@@ -15,7 +15,7 @@ Lista_Asistencia As screen:
                 Sort(Filter(
                     ASISTENCIA_2023,
                     CORREO_TECNICO = Correo_Email_User.Text,
-                    StartsWith(FECHA,BuscarMiAsistencia.Text) || StartsWith(LOCAL,BuscarMiAsistencia.Text)
+                    StartsWith(FECHA,BuscarMiAsistencia.Text) || StartsWith(LOCAL_INGRESO,BuscarMiAsistencia.Text)
                 ),ID,SortOrder.Descending),
                 ASISTENCIA_2023
             )
@@ -46,7 +46,7 @@ Lista_Asistencia As screen:
             AccessibleLabel: =Self.Tooltip
             Height: =104
             Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent)
+            OnSelect: =Select(Parent);Navigate(Detalle_Mi_Asistencia);Set(varMiAsistencia,ThisItem)
             PaddingBottom: =16
             PaddingLeft: =16
             PaddingRight: =16
@@ -130,7 +130,7 @@ Lista_Asistencia As screen:
             OnSelect: =Select(Parent)
             Size: =12
             Text: |-
-                ="LOCAL: "&ThisItem.LOCAL
+                ="LOCAL: "&ThisItem.LOCAL_INGRESO
             Width: =189
             X: =356
             Y: =81

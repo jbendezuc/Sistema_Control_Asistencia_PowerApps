@@ -3,7 +3,7 @@
     "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
     "CdpRevision": {
       "BaseUrl": "/",
-      "LastChangedTimeString": "2023-09-19T16:28:45.1920000Z",
+      "LastChangedTimeString": "2023-09-25T18:17:14.9880000Z",
       "RevisionNumber": 1
     },
     "ConnectedDataSourceInfoNameMapping": {
@@ -36,7 +36,8 @@
       "HORA_SALIDA": "HORA_SALIDA",
       "ID": "ID",
       "LATITUD": "LATITUD",
-      "LOCAL": "LOCAL",
+      "LOCAL": "LOCAL_INGRESO",
+      "LOCAL_SALIDA": "LOCAL_SALIDA",
       "LONGITUD": "LONGITUD",
       "Modified": "Modificado",
       "OData__ColorTag": "Etiqueta de color",

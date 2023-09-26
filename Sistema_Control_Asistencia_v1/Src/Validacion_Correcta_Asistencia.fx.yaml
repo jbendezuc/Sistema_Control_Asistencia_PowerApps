@@ -35,9 +35,9 @@
         Color: =RGBA(0, 0, 0, Timer1_1.Value/Timer1_1.Duration)
         FontWeight: =FontWeight.Bold
         Height: =iconCircle1.Height
-        Size: =21
+        Size: =27
         Text: ="Se registro correctamente su asistencia."
-        Width: =414
+        Width: =498
         X: =Parent.Width/2 - Self.Width/2
         Y: =iconCheck1.Y + iconCheck1.Height + 100
         ZIndex: =4

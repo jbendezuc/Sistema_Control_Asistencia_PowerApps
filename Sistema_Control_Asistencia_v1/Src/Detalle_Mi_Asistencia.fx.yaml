@@ -1,0 +1,238 @@
+"Detalle_Mi_Asistencia As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =RGBA(202, 202, 202, 1)
+
+    RectQuickActionBar3 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(0, 13, 75, 1)
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    Canvas2 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar3.Y + RectQuickActionBar3.Height
+        ZIndex: =3
+
+        DataCard2 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height - 100
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Rectangle7 As rectangle:
+                BorderThickness: =1
+                Fill: =RGBA(175, 191, 224, 1)
+                Height: =263
+                Width: =560
+                X: =37
+                Y: =508
+                ZIndex: =1
+
+            Rectangle6 As rectangle:
+                BorderStyle: =BorderStyle.Dashed
+                BorderThickness: =5
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =152
+                Width: =560
+                X: =37
+                Y: =134
+                ZIndex: =2
+
+            Label12 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =16
+                Text: ="ASISTENCIA N° "&varMiAsistencia.ID
+                Width: =560
+                X: =37
+                Y: =20
+                ZIndex: =3
+
+            Label12_1 As label:
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                Size: =18
+                Text: |-
+                    ="Tecnico: "
+                Width: =191
+                X: =37
+                Y: =145
+                ZIndex: =4
+
+            Label12_2 As label:
+                AutoHeight: =true
+                Height: =44
+                Size: =16
+                Text: =varMiAsistencia.TECNICO
+                Width: =369
+                X: =228
+                Y: =145
+                ZIndex: =5
+
+            Rectangle6_1 As rectangle:
+                BorderStyle: =BorderStyle.Dashed
+                BorderThickness: =3
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =1
+                Width: =560
+                X: =37
+                Y: =207
+                ZIndex: =6
+
+            Label12_3 As label:
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                Size: =18
+                Text: |-
+                    ="Correo: "
+                Width: =191
+                X: =37
+                Y: =220
+                ZIndex: =7
+
+            Label12_4 As label:
+                AutoHeight: =true
+                Height: =44
+                Size: =16
+                Text: =varMiAsistencia.CORREO_TECNICO
+                Width: =369
+                X: =228
+                Y: =220
+                ZIndex: =8
+
+            Label12_5 As label:
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                Size: =18
+                Text: |-
+                    ="Local: "
+                Width: =191
+                X: =37
+                Y: =812
+                ZIndex: =10
+
+            Label12_6 As label:
+                AutoHeight: =true
+                Height: =44
+                Size: =16
+                Text: =varMiAsistencia.LOCAL_INGRESO
+                Width: =369
+                X: =187
+                Y: =815
+                ZIndex: =11
+
+            Label12_7 As label:
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                Size: =18
+                Text: |-
+                    ="Fecha: "
+                Width: =191
+                X: =37
+                Y: =530
+                ZIndex: =12
+
+            Label12_8 As label:
+                AutoHeight: =true
+                Height: =44
+                Size: =16
+                Text: =varMiAsistencia.FECHA
+                Width: =369
+                X: =228
+                Y: =536
+                ZIndex: =13
+
+            Label12_9 As label:
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                Size: =18
+                Text: |-
+                    ="Hora Ingreso: "
+                Width: =191
+                X: =37
+                Y: =608
+                ZIndex: =14
+
+            Label12_10 As label:
+                AutoHeight: =true
+                Height: =44
+                Size: =16
+                Text: =varMiAsistencia.HORA_INGRESO
+                Width: =369
+                X: =228
+                Y: =611
+                ZIndex: =15
+
+            Label12_11 As label:
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                Size: =18
+                Text: |-
+                    ="Hora Salida: "
+                Width: =191
+                X: =37
+                Y: =684
+                ZIndex: =16
+
+            Label12_12 As label:
+                AutoHeight: =true
+                Height: =44
+                Size: =16
+                Text: =varMiAsistencia.HORA_SALIDA
+                Width: =369
+                X: =228
+                Y: =691
+                ZIndex: =17
+
+            Label12_13 As label:
+                FontWeight: =FontWeight.Bold
+                Height: =41
+                Size: =18
+                Text: |-
+                    ="INFORMACIÓN: "
+                Width: =212
+                X: =37
+                Y: =82
+                ZIndex: =18
+
+            Label12_14 As label:
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                Size: =18
+                Text: |-
+                    ="INGRESO: "
+                Width: =191
+                X: =37
+                Y: =309
+                ZIndex: =19
+
+    Label9 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =66
+        Size: =27
+        Text: ="DETALLE ASISTENCIA"
+        Width: =595
+        X: =44
+        Y: =12
+        ZIndex: =4
+
+    Arrow1_1 As arrow.backArrow:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =66
+        OnSelect: =Navigate(Portada,ScreenTransition.CoverRight)
+        Width: =66
+        X: =30
+        Y: =12
+        ZIndex: =5
+

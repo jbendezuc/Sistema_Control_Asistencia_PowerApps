@@ -10,6 +10,7 @@
 
     LblAppName1 As label:
         Align: =Align.Center
+        FontWeight: =FontWeight.Bold
         Height: =88
         Size: =27
         Text: ="REGISTRO ASISTENCIA"
@@ -467,7 +468,7 @@
                         {
                             TECNICO: Nombre_Tecnico.Text,
                             CORREO_TECNICO: User().Email,
-                            LOCAL: Local.Text,
+                            LOCAL_INGRESO: ubicacion,
                             FECHA: fechaActual,
                             HORA_INGRESO: HoraActual,
                             //HORA_INGRESO: Text(TimeInSec;"[$-en-US]hh:mm:ss AM/PM");
@@ -476,19 +477,22 @@
                             LONGITUD:miLongitud
                         }
                     ),If(
+                        //SI ES ANTES DEL MEDIO DIA
                         Hour(HoraActual) * 60 + Minute(HoraActual) < Hour(HoraTurno) * 60 + Minute(HoraTurno),
                         Patch(
                             ASISTENCIA_2023,
                             LookUp(ASISTENCIA_2023,CORREO_TECNICO = User().Email && FECHA = fechaActual),
                             {
-                                HORA_INGRESO: HoraActual
+                                HORA_INGRESO: HoraActual,
+                                LOCAL_INGRESO: ubicacion
                             }
                         ),
                         Patch(
                             ASISTENCIA_2023,
                             LookUp(ASISTENCIA_2023,CORREO_TECNICO = User().Email && FECHA = fechaActual),
                             {
-                                HORA_SALIDA: HoraActual
+                                HORA_SALIDA: HoraActual,
+                                LOCAL_SALIDA: ubicacion
                             }
                         )
                     )
