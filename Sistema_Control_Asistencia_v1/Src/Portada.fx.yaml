@@ -8,7 +8,7 @@ Portada As screen:
         Height: =72
         Width: =89
         X: =118
-        Y: =680
+        Y: =625
         ZIndex: =1
 
     Rectangle1_5 As rectangle:
@@ -17,7 +17,7 @@ Portada As screen:
         Height: =72
         Width: =89
         X: =118
-        Y: =555
+        Y: =500
         ZIndex: =2
 
     Button3 As button:
@@ -31,8 +31,11 @@ Portada As screen:
             =Navigate(Datos_Usuario,ScreenTransition.Fade);
             
             //Conexion API
-            Set(_api_key,"bbaa8e52768935b19b3e9c68946981bf");
-            Set(Respuesta,PowerApp_Tiempo.Run(Location.Latitude,Location.Longitude,_api_key));
+            /*
+            Set(_api_key;"bbaa8e52768935b19b3e9c68946981bf");;
+            Set(Respuesta;PowerApp_Tiempo.Run(Location.Latitude;Location.Longitude;_api_key));;
+            */
+            //CLIMA API
             Set(Tiempo_Celsius, Left(Respuesta.salida,3));
             
             //VALIDACION DE FECHA Y HORA
@@ -55,7 +58,7 @@ Portada As screen:
         Text: ="Registrar Asistencia"
         Width: =306
         X: =197
-        Y: =548
+        Y: =493
         ZIndex: =3
 
     Button3_1 As button:
@@ -70,7 +73,7 @@ Portada As screen:
         Text: ="Mis Asistencias"
         Width: =306
         X: =197
-        Y: =672
+        Y: =617
         ZIndex: =4
 
     Icon1 As icon.Database:
@@ -80,7 +83,7 @@ Portada As screen:
         Icon: =Icon.Database
         Width: =58
         X: =133
-        Y: =555
+        Y: =500
         ZIndex: =5
 
     Icon1_1 As icon.Database:
@@ -90,7 +93,7 @@ Portada As screen:
         Icon: =Icon.View
         Width: =52
         X: =129
-        Y: =684
+        Y: =629
         ZIndex: =6
 
     Rectangle2 As rectangle:
@@ -164,4 +167,38 @@ Portada As screen:
         X: =40
         Y: =877
         ZIndex: =14
+
+    Rectangle1_7 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =72
+        Width: =89
+        X: =118
+        Y: =761
+        ZIndex: =15
+
+    Button3_2 As button:
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(250, 155, 112, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =84
+        OnSelect: |
+            =Navigate(Lista_Asistencia_Admin,ScreenTransition.Cover)
+        Size: =24
+        Text: ="Asistencia Tecnicos"
+        Width: =306
+        X: =197
+        Y: =753
+        ZIndex: =16
+
+    Icon1_2 As icon.Database:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =60
+        Icon: =Icon.View
+        Width: =52
+        X: =129
+        Y: =765
+        ZIndex: =17
 

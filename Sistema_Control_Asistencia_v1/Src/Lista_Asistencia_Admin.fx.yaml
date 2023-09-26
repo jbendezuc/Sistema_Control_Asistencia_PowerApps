@@ -1,21 +1,21 @@
-Lista_Asistencia As screen:
-    Fill: =RGBA(186, 202, 226, 1)
+Lista_Asistencia_Admin As screen:
+    Fill: =RGBA(220, 153, 153, 1)
 
-    "BrowseGallery1_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+    "BrowseGallery1_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         DelayItemLoading: =true
         Height: =978
         Items: |-
             =If(
-                !IsBlank(Correo_Email_User.Text) && IsBlank(BuscarMiAsistencia.Text),
+                !IsBlank(Fecha_Actual.Text) && IsBlank(BuscarMiAsistencia_1.Text),
                 Sort(Filter(
                     ASISTENCIA_2023,
-                    CORREO_TECNICO = Correo_Email_User.Text
+                    FECHA = Fecha_Actual.Text
                 ),ID,SortOrder.Descending),
-                !IsBlank(Correo_Email_User.Text) && !IsBlank(BuscarMiAsistencia.Text),
+                !IsBlank(Fecha_Actual.Text) && !IsBlank(BuscarMiAsistencia_1.Text),
                 Sort(Filter(
                     ASISTENCIA_2023,
-                    CORREO_TECNICO = Correo_Email_User.Text,
-                    StartsWith(FECHA,BuscarMiAsistencia.Text) || StartsWith(LOCAL_INGRESO,BuscarMiAsistencia.Text)
+                    CORREO_TECNICO = Fecha_Actual.Text,
+                    StartsWith(FECHA,BuscarMiAsistencia_1.Text) || StartsWith(LOCAL_INGRESO,BuscarMiAsistencia_1.Text)
                 ),ID,SortOrder.Descending),
                 ASISTENCIA_2023
             )
@@ -25,10 +25,10 @@ Lista_Asistencia As screen:
         TemplatePadding: =0
         TemplateSize: =170
         Width: =Parent.Width
-        Y: =172
+        Y: =158
         ZIndex: =1
 
-        Label13_1 As label:
+        Label13_3 As label:
             BorderThickness: =1
             Height: =31
             Size: =21
@@ -38,7 +38,7 @@ Lista_Asistencia As screen:
             Y: =122
             ZIndex: =1
 
-        Label13 As label:
+        Label13_2 As label:
             BorderThickness: =1
             Height: =31
             Size: =21
@@ -48,7 +48,7 @@ Lista_Asistencia As screen:
             Y: =92
             ZIndex: =2
 
-        Image1_3 As image:
+        Image1_5 As image:
             Height: =83
             Image: =clock
             ImagePosition: =ImagePosition.Stretch
@@ -62,7 +62,7 @@ Lista_Asistencia As screen:
             Y: =29
             ZIndex: =3
 
-        NextArrow1_1 As icon.ChevronRight:
+        NextArrow1_2 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
             Height: =104
             Icon: =Icon.ChevronRight
@@ -77,21 +77,21 @@ Lista_Asistencia As screen:
             Y: =29
             ZIndex: =4
 
-        Separator1_1 As rectangle:
+        Separator1_2 As rectangle:
             Height: =8
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - Self.Height
             ZIndex: =5
 
-        Rectangle4_1 As rectangle:
-            Height: =Parent.TemplateHeight - Separator1_1.Height
+        Rectangle4_2 As rectangle:
+            Height: =Parent.TemplateHeight - Separator1_2.Height
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
             Width: =4
             ZIndex: =6
 
-        Subtitle1_2 As label:
+        Subtitle1_3 As label:
             Align: =Align.Center
             BorderThickness: =2
             Color: =RGBA(9, 33, 98, 1)
@@ -110,7 +110,7 @@ Lista_Asistencia As screen:
             Y: =4
             ZIndex: =7
 
-        Label7 As label:
+        Label7_6 As label:
             AutoHeight: =true
             FontWeight: =FontWeight.Bold
             Height: =33
@@ -122,7 +122,7 @@ Lista_Asistencia As screen:
             Y: =45
             ZIndex: =8
 
-        Label7_1 As label:
+        Label7_5 As label:
             FontWeight: =FontWeight.Bold
             Height: =31
             OnSelect: =Select(Parent)
@@ -134,7 +134,7 @@ Lista_Asistencia As screen:
             Y: =92
             ZIndex: =9
 
-        Label7_2 As label:
+        Label7_7 As label:
             FontWeight: =FontWeight.Bold
             Height: =31
             OnSelect: =Select(Parent)
@@ -146,7 +146,7 @@ Lista_Asistencia As screen:
             Y: =123
             ZIndex: =10
 
-        Label7_3 As label:
+        Label7_8 As label:
             AutoHeight: =true
             FontWeight: =FontWeight.Semibold
             Height: =31
@@ -159,7 +159,7 @@ Lista_Asistencia As screen:
             Y: =92
             ZIndex: =11
 
-        Label7_4 As label:
+        Label7_9 As label:
             FontWeight: =FontWeight.Semibold
             Height: =33
             OnSelect: =Select(Parent)
@@ -171,7 +171,7 @@ Lista_Asistencia As screen:
             Y: =121
             ZIndex: =12
 
-    Rectangle5 As rectangle:
+    Rectangle5_1 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 1)
         Fill: =RGBA(0, 13, 75, 1)
         Height: =76
@@ -179,7 +179,7 @@ Lista_Asistencia As screen:
         Y: =1
         ZIndex: =2
 
-    Arrow1 As arrow.backArrow:
+    Arrow1_2 As arrow.backArrow:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =66
         OnSelect: =Navigate(Portada,ScreenTransition.CoverRight)
@@ -188,7 +188,7 @@ Lista_Asistencia As screen:
         Y: =6
         ZIndex: =3
 
-    Label10 As label:
+    Label10_1 As label:
         Color: =RGBA(255, 255, 255, 1)
         FontWeight: =FontWeight.Bold
         Height: =70
@@ -199,7 +199,7 @@ Lista_Asistencia As screen:
         Y: =5
         ZIndex: =4
 
-    BuscarMiAsistencia As text:
+    BuscarMiAsistencia_1 As text:
         Default: =""
         Height: =64
         HintText: |-
@@ -211,7 +211,7 @@ Lista_Asistencia As screen:
         Y: =84
         ZIndex: =5
 
-    Icon8 As icon.Search:
+    Icon8_1 As icon.Search:
         Color: =RGBA(153, 153, 153, 1)
         DisplayMode: =DisplayMode.View
         Height: =36
@@ -221,7 +221,7 @@ Lista_Asistencia As screen:
         Y: =97
         ZIndex: =6
 
-    Correo_Email_User As label:
+    Fecha_Actual As label:
         Height: =43
         Size: =21
         Text: =User().Email

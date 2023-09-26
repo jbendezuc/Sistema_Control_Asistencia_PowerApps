@@ -136,6 +136,7 @@
     "Datos_Usuario",
     "Validacion_Correcta_Asistencia",
     "Lista_Asistencia",
-    "Detalle_Mi_Asistencia"
+    "Lista_Asistencia_Admin",
+    "Detalle_Asistencia"
   ]
 }

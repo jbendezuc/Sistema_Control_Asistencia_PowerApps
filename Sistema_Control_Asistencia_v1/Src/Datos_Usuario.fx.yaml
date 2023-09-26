@@ -438,8 +438,8 @@
                     )))))))))))));
                     
                     //PETICION NUEVAMENTE DE HORA - API VALIDA
-                    Set(Respuesta,PowerApp_Tiempo.Run(Location.Latitude,Location.Longitude,_api_key));
-                    Set(hora_api_2,Text(DateAdd(Date(1970,1,1),RoundUp(Respuesta.fecha_hora,0),TimeUnit.Seconds),"hh:mm"));
+                    Set(Respuesta_1,PowerApp_Tiempo.Run(Location.Latitude,Location.Longitude,_api_key));
+                    Set(hora_api_2,Text(DateAdd(Date(1970,1,1),RoundUp(Respuesta_1.fecha_hora,0),TimeUnit.Seconds),"hh:mm"));
                     
                     Set(horaTexto_2, hora_api); // Reemplaza con la hora obtenida de Respuesta.fecha_hora
                     Set(horas_2, Mod(Value(Left(horaTexto, 2))-5,24)); // Extraer horas como número
