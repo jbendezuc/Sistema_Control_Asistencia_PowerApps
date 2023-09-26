@@ -805,7 +805,6 @@
                     Height: =AddMediaButton1.Height
                     Image: =If(IsBlank(AddMediaButton1.Media), SampleImage, AddMediaButton1.Media)
                     ImagePosition: =ImagePosition.Fill
-                    ImageRotation: =ImageRotation.Rotate270
                     Width: =AddMediaButton1.Width
                     X: =AddMediaButton1.X
                     Y: =AddMediaButton1.Y

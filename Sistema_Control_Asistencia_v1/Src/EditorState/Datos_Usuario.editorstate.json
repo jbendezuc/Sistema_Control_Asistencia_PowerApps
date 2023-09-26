@@ -8596,14 +8596,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "ImageRotation.None",
-          "InvariantPropertyName": "ImageRotation",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "ImageRotation",
         "X",
         "Y",
         "Width",
