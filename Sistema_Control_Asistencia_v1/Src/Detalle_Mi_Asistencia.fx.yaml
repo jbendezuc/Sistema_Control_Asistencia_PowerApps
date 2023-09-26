@@ -21,7 +21,7 @@
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =Parent.Height - 100
+            Height: =1144
             Width: =Parent.Width
             X: =0
             Y: =0
@@ -30,17 +30,17 @@
             Rectangle7 As rectangle:
                 BorderThickness: =1
                 Fill: =RGBA(175, 191, 224, 1)
-                Height: =263
+                Height: =207
                 Width: =560
                 X: =37
-                Y: =508
+                Y: =442
                 ZIndex: =1
 
             Rectangle6 As rectangle:
                 BorderStyle: =BorderStyle.Dashed
                 BorderThickness: =5
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =152
+                Height: =234
                 Width: =560
                 X: =37
                 Y: =134
@@ -50,7 +50,7 @@
                 Align: =Align.Center
                 FontWeight: =FontWeight.Bold
                 Height: =70
-                Size: =16
+                Size: =21
                 Text: ="ASISTENCIA N° "&varMiAsistencia.ID
                 Width: =560
                 X: =37
@@ -117,18 +117,8 @@
                     ="Local: "
                 Width: =191
                 X: =37
-                Y: =812
+                Y: =587
                 ZIndex: =10
-
-            Label12_6 As label:
-                AutoHeight: =true
-                Height: =44
-                Size: =16
-                Text: =varMiAsistencia.LOCAL_INGRESO
-                Width: =369
-                X: =187
-                Y: =815
-                ZIndex: =11
 
             Label12_7 As label:
                 FontWeight: =FontWeight.Bold
@@ -138,7 +128,7 @@
                     ="Fecha: "
                 Width: =191
                 X: =37
-                Y: =530
+                Y: =307
                 ZIndex: =12
 
             Label12_8 As label:
@@ -148,7 +138,7 @@
                 Text: =varMiAsistencia.FECHA
                 Width: =369
                 X: =228
-                Y: =536
+                Y: =315
                 ZIndex: =13
 
             Label12_9 As label:
@@ -159,7 +149,7 @@
                     ="Hora Ingreso: "
                 Width: =191
                 X: =37
-                Y: =608
+                Y: =453
                 ZIndex: =14
 
             Label12_10 As label:
@@ -169,28 +159,17 @@
                 Text: =varMiAsistencia.HORA_INGRESO
                 Width: =369
                 X: =228
-                Y: =611
+                Y: =458
                 ZIndex: =15
-
-            Label12_11 As label:
-                FontWeight: =FontWeight.Bold
-                Height: =44
-                Size: =18
-                Text: |-
-                    ="Hora Salida: "
-                Width: =191
-                X: =37
-                Y: =684
-                ZIndex: =16
 
             Label12_12 As label:
                 AutoHeight: =true
                 Height: =44
                 Size: =16
-                Text: =varMiAsistencia.HORA_SALIDA
+                Text: =varMiAsistencia.LOCAL_INGRESO
                 Width: =369
                 X: =228
-                Y: =691
+                Y: =590
                 ZIndex: =17
 
             Label12_13 As label:
@@ -212,8 +191,137 @@
                     ="INGRESO: "
                 Width: =191
                 X: =37
-                Y: =309
+                Y: =387
                 ZIndex: =19
+
+            Rectangle6_2 As rectangle:
+                BorderStyle: =BorderStyle.Dashed
+                BorderThickness: =3
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =1
+                Width: =560
+                X: =37
+                Y: =293
+                ZIndex: =20
+
+            Label12_15 As label:
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                Size: =18
+                Text: |-
+                    ="Estado: "
+                Width: =191
+                X: =37
+                Y: =518
+                ZIndex: =21
+
+            Label12_16 As label:
+                AutoHeight: =true
+                Height: =44
+                Size: =16
+                Text: =varMiAsistencia.ESTADO
+                Width: =369
+                X: =228
+                Y: =525
+                ZIndex: =22
+
+            Rectangle7_1 As rectangle:
+                BorderThickness: =1
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =1
+                Width: =560
+                X: =37
+                Y: =507
+                ZIndex: =23
+
+            Rectangle7_2 As rectangle:
+                BorderThickness: =1
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =1
+                Width: =560
+                X: =37
+                Y: =573
+                ZIndex: =24
+
+            Rectangle7_3 As rectangle:
+                BorderThickness: =1
+                Fill: =RGBA(175, 191, 224, 1)
+                Height: =143
+                Width: =560
+                X: =37
+                Y: =733
+                ZIndex: =25
+
+            Label12_6 As label:
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                Size: =18
+                Text: |-
+                    ="Local: "
+                Width: =191
+                X: =37
+                Y: =812
+                ZIndex: =26
+
+            Label12_11 As label:
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                Size: =18
+                Text: |-
+                    ="Hora Salida: "
+                Width: =191
+                X: =37
+                Y: =744
+                ZIndex: =27
+
+            Label12_17 As label:
+                AutoHeight: =true
+                Height: =44
+                Size: =16
+                Text: =varMiAsistencia.HORA_INGRESO
+                Width: =369
+                X: =228
+                Y: =749
+                ZIndex: =28
+
+            Label12_18 As label:
+                AutoHeight: =true
+                Height: =44
+                Size: =16
+                Text: =varMiAsistencia.LOCAL_INGRESO
+                Width: =369
+                X: =228
+                Y: =820
+                ZIndex: =29
+
+            Label12_19 As label:
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                Size: =18
+                Text: |-
+                    ="SALIDA: "
+                Width: =191
+                X: =37
+                Y: =678
+                ZIndex: =30
+
+            Rectangle7_4 As rectangle:
+                BorderThickness: =1
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =1
+                Width: =560
+                X: =37
+                Y: =798
+                ZIndex: =33
+
+            Image6_11 As image:
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =123
+                Image: =OCGTI
+                Width: =640
+                Y: =1021
+                ZIndex: =34
 
     Label9 As label:
         Align: =Align.Center

@@ -67,7 +67,7 @@ Portada As screen:
         OnSelect: |
             =Navigate(Lista_Asistencia,ScreenTransition.Cover)
         Size: =24
-        Text: ="Ver Asistencia"
+        Text: ="Mis Asistencias"
         Width: =306
         X: =197
         Y: =672
