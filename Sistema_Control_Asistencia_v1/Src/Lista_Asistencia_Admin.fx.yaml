@@ -14,7 +14,7 @@ Lista_Asistencia_Admin As screen:
                 !IsBlank(Fecha_Actual.Text) && !IsBlank(BuscarMiAsistencia_1.Text),
                 Sort(Filter(
                     ASISTENCIA_2023,
-                    CORREO_TECNICO = Fecha_Actual.Text,
+                    FECHA = Fecha_Actual.Text,
                     StartsWith(FECHA,BuscarMiAsistencia_1.Text) || StartsWith(LOCAL_INGRESO,BuscarMiAsistencia_1.Text)
                 ),ID,SortOrder.Descending),
                 ASISTENCIA_2023
@@ -224,7 +224,7 @@ Lista_Asistencia_Admin As screen:
     Fecha_Actual As label:
         Height: =43
         Size: =21
-        Text: =User().Email
+        Text: =fechaActual
         Visible: =false
         Width: =614
         X: =11

@@ -184,7 +184,13 @@ Portada As screen:
         FontWeight: =FontWeight.Bold
         Height: =84
         OnSelect: |
-            =Navigate(Lista_Asistencia_Admin,ScreenTransition.Cover)
+            =//VALIDACION DE FECHA Y HORA
+            Set(fecha_api,Text(DateAdd(Date(1970,1,1),RoundUp(Respuesta.fecha_hora,0),TimeUnit.Seconds),"[$-es-ES]dd/mm/yyyy"));
+            
+            // FECHA API VALIDA
+            If(horas >= 19 && horas <= 23,Set(fechaActual,Text(DateAdd(fecha_api,-1,TimeUnit.Days),"dd/mm/yyyy")),Set(fechaActual,fecha_api)); 
+            
+            Navigate(Lista_Asistencia_Admin,ScreenTransition.Cover)
         Size: =24
         Text: ="Asistencia Tecnicos"
         Width: =306
