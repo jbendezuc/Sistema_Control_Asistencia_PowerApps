@@ -492,7 +492,7 @@
                             }
                         )
                     )
-                    );Navigate(Portada,ScreenTransition.CoverRight)
+                    );Navigate(Validacion_Correcta_Asistencia,ScreenTransition.CoverRight)
                     
                     //REGISTRO DE ASISTENCIA
                     /*

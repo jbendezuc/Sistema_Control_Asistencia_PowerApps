@@ -1,0 +1,198 @@
+Lista_Asistencia As screen:
+    Fill: =RGBA(186, 202, 226, 1)
+
+    "BrowseGallery1_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =978
+        Items: |-
+            =If(
+                !IsBlank(Correo_Email_User.Text) && IsBlank(BuscarMiAsistencia.Text),
+                Sort(Filter(
+                    ASISTENCIA_2023,
+                    CORREO_TECNICO = Correo_Email_User.Text
+                ),ID,SortOrder.Descending),
+                !IsBlank(Correo_Email_User.Text) && !IsBlank(BuscarMiAsistencia.Text),
+                Sort(Filter(
+                    ASISTENCIA_2023,
+                    CORREO_TECNICO = Correo_Email_User.Text,
+                    StartsWith(FECHA,BuscarMiAsistencia.Text) || StartsWith(LOCAL,BuscarMiAsistencia.Text)
+                ),ID,SortOrder.Descending),
+                ASISTENCIA_2023
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =152
+        Width: =Parent.Width
+        Y: =172
+        ZIndex: =1
+
+        Image1_3 As image:
+            Height: =83
+            Image: =clock
+            ImagePosition: =ImagePosition.Stretch
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =99
+            X: =16
+            Y: =29
+            ZIndex: =1
+
+        NextArrow1_1 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =104
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="Ver los detalles del elemento"
+            Width: =70
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =29
+            ZIndex: =4
+
+        Separator1_1 As rectangle:
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle4_1 As rectangle:
+            Height: =Parent.TemplateHeight - Separator1_1.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
+
+        Subtitle1_2 As label:
+            Align: =Align.Center
+            BorderThickness: =3
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =33
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20
+            Text: =ThisItem.FECHA
+            VerticalAlign: =VerticalAlign.Top
+            Width: =435
+            X: =123
+            Y: =4
+            ZIndex: =7
+
+        Label7 As label:
+            AutoHeight: =true
+            FontWeight: =FontWeight.Bold
+            Height: =33
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.TECNICO
+            Width: =433
+            X: =125
+            Y: =45
+            ZIndex: =8
+
+        Label7_1 As label:
+            Height: =31
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: |-
+                ="INGRESO: "&ThisItem.HORA_INGRESO
+            Width: =217
+            X: =150
+            Y: =81
+            ZIndex: =9
+
+        Label7_2 As label:
+            Height: =31
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: |-
+                ="SALIDA: "&ThisItem.HORA_SALIDA
+            Width: =217
+            X: =150
+            Y: =112
+            ZIndex: =10
+
+        Label7_3 As label:
+            AutoHeight: =true
+            FontWeight: =FontWeight.Semibold
+            Height: =31
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: |-
+                ="LOCAL: "&ThisItem.LOCAL
+            Width: =189
+            X: =356
+            Y: =81
+            ZIndex: =11
+
+    Rectangle5 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(0, 13, 75, 1)
+        Height: =76
+        Width: =640
+        Y: =1
+        ZIndex: =2
+
+    Arrow1 As arrow.backArrow:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =66
+        OnSelect: =Navigate(Portada,ScreenTransition.CoverRight)
+        Width: =66
+        X: =19
+        Y: =6
+        ZIndex: =3
+
+    Label10 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =27
+        Text: ="LISTA DE ASISTENCIA"
+        Width: =389
+        X: =135
+        Y: =5
+        ZIndex: =4
+
+    BuscarMiAsistencia As text:
+        Default: =""
+        Height: =64
+        HintText: |-
+            ="Busca por fecha ##/##/## Ó SL##"
+        HoverFill: =RGBA(209, 232, 178, 1)
+        Size: =21
+        Width: =614
+        X: =11
+        Y: =84
+        ZIndex: =5
+
+    Icon8 As icon.Search:
+        Color: =RGBA(153, 153, 153, 1)
+        DisplayMode: =DisplayMode.View
+        Height: =36
+        Icon: =Icon.Search
+        Width: =47
+        X: =564
+        Y: =97
+        ZIndex: =6
+
+    Correo_Email_User As label:
+        Height: =43
+        Size: =21
+        Text: =User().Email
+        Visible: =false
+        Width: =614
+        X: =11
+        Y: =148
+        ZIndex: =7
+

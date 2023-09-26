@@ -133,6 +133,8 @@
   },
   "ScreenOrder": [
     "Portada",
-    "Datos_Usuario"
+    "Datos_Usuario",
+    "Validacion_Correcta_Asistencia",
+    "Lista_Asistencia"
   ]
 }
