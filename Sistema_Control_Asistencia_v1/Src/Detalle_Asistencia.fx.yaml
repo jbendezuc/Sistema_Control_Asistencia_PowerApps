@@ -288,7 +288,7 @@
                 AutoHeight: =true
                 Height: =44
                 Size: =16
-                Text: =varMiAsistencia.LOCAL_INGRESO
+                Text: =varMiAsistencia.LOCAL_SALIDA
                 Width: =369
                 X: =228
                 Y: =1162
