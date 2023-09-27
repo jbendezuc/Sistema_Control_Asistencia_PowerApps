@@ -31,7 +31,7 @@
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =1396
+            Height: =1590
             Width: =Parent.Width
             X: =0
             Y: =0
@@ -120,11 +120,15 @@
             Registrar As button:
                 BorderThickness: =5
                 Color: =RGBA(0, 0, 0, 1)
+                DisplayMode: =If(Len(UploadedImage1.Image)>30,DisplayMode.Edit,DisplayMode.Disabled)
                 Fill: =RGBA(39, 207, 39, 1)
                 FontWeight: =FontWeight.Bold
                 Height: =48
-                OnSelect: |
-                    =//UBICACION ACTUAL
+                OnSelect: |+
+                    =//LEER FORMATO FOTO
+                    Set(var_foto,JSON(UploadedImage1.Image,JSONFormat.IncludeBinaryData));
+                    
+                    //UBICACION ACTUAL
                     Set(
                         miLatitud,
                         Location.Latitude
@@ -461,7 +465,7 @@
                     
                     If(
                         IsBlank(LookUp(ASISTENCIA_2023,CORREO_TECNICO = User().Email && FECHA = fechaActual )),
-                        //REGISTRO DE ASISTENCIA
+                        //REGISTRO DE ASISTENCIA SI NO EXISTE
                         Patch(
                         ASISTENCIA_2023,
                         Defaults(ASISTENCIA_2023),
@@ -473,18 +477,20 @@
                             HORA_INGRESO: HoraActual,
                             //HORA_INGRESO: Text(TimeInSec;"[$-en-US]hh:mm:ss AM/PM");
                             ESTADO:estado,
+                            FOTO_RELOJ_INGRESO:Text(var_foto),
                             LATITUD:miLatitud,
                             LONGITUD:miLongitud
                         }
                     ),If(
-                        //SI ES ANTES DEL MEDIO DIA
+                        //SI ES ANTES DEL MEDIO DIA Y YA EXISTE
                         Hour(HoraActual) * 60 + Minute(HoraActual) < Hour(HoraTurno) * 60 + Minute(HoraTurno),
                         Patch(
                             ASISTENCIA_2023,
                             LookUp(ASISTENCIA_2023,CORREO_TECNICO = User().Email && FECHA = fechaActual),
                             {
                                 HORA_INGRESO: HoraActual,
-                                LOCAL_INGRESO: ubicacion
+                                LOCAL_INGRESO: ubicacion,
+                                FOTO_RELOJ_INGRESO:Text(var_foto)
                             }
                         ),
                         Patch(
@@ -492,45 +498,19 @@
                             LookUp(ASISTENCIA_2023,CORREO_TECNICO = User().Email && FECHA = fechaActual),
                             {
                                 HORA_SALIDA: HoraActual,
-                                LOCAL_SALIDA: ubicacion
+                                LOCAL_SALIDA: ubicacion,
+                                FOTO_RELOJ_SALIDA: Text(var_foto)
                             }
                         )
                     )
                     );Navigate(Validacion_Correcta_Asistencia,ScreenTransition.CoverRight)
                     
-                    //REGISTRO DE ASISTENCIA
-                    /*
-                    Patch(
-                        ASISTENCIA_2023;
-                        Defaults(ASISTENCIA_2023);
-                        {
-                            TECNICO: Nombre_Tecnico.Text;
-                            CORREO_TECNICO: User().Email;
-                            LOCAL: Local.Text;
-                            FECHA: fechaActual;
-                            HORA_INGRESO: horacompleta;
-                            //HORA_INGRESO: Text(TimeInSec;"[$-en-US]hh:mm:ss AM/PM");
-                            ESTADO:estado;
-                            LATITUD:miLatitud;
-                            LONGITUD:miLongitud
-                        }
-                    );;
-                    */
                 Size: =24
                 Text: ="Registrar"
                 Width: =280
                 X: =187
                 Y: =1348
                 ZIndex: =9
-
-            Local As label:
-                Height: =70
-                Size: =21
-                Text: =ubicacion
-                Width: =560
-                X: =80
-                Y: =713
-                ZIndex: =10
 
             Nombre As label:
                 FontWeight: =FontWeight.Bold
@@ -783,12 +763,12 @@
                 Y: =427
                 ZIndex: =35
 
-            Label2 As label:
-                Height: =70
+            PRUEBA_HORA_ACTUAL As label:
+                Height: =54
                 Size: =21
                 Text: |-
-                    =Hour(horacompleta)&":"&Minute(horacompleta)
-                Width: =560
+                    =//Hour(horacompleta)&":"&Minute(horacompleta)
+                Width: =153
                 X: =30
                 Y: =624
                 ZIndex: =36
@@ -802,10 +782,10 @@
 
                 UploadedImage1 As image:
                     BorderThickness: =2
-                    Height: =AddMediaButton1.Height
+                    Height: =432
                     Image: =If(IsBlank(AddMediaButton1.Media), SampleImage, AddMediaButton1.Media)
                     ImagePosition: =ImagePosition.Fill
-                    Width: =AddMediaButton1.Width
+                    Width: =497
                     X: =AddMediaButton1.X
                     Y: =AddMediaButton1.Y
                     ZIndex: =38
@@ -813,12 +793,22 @@
                 AddMediaButton1 As addMedia:
                     BorderThickness: =2
                     Height: =432
+                    Reset: =resetearControles
                     Size: =25
                     Text: ="Agregar foto del reloj en el local que se encuentra"
-                    Width: =575
-                    X: =33
+                    Width: =497
+                    X: =78
                     Y: =849
                     ZIndex: =39
+
+            Image6_12 As image:
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =123
+                Image: =OCGTI
+                Width: =640
+                Y: =1467
+                ZIndex: =40
 
     Icon10 As icon.BackArrow:
         Color: =RGBA(255, 255, 255, 1)

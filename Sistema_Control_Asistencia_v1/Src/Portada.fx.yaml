@@ -159,19 +159,11 @@ Portada As screen:
         Y: =167
         ZIndex: =13
 
-    Label1 As label:
-        Height: =70
-        Size: =21
-        Text: =fechaActual
-        Width: =560
-        X: =40
-        Y: =877
-        ZIndex: =14
-
     Rectangle1_7 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 1)
         Height: =72
+        Visible: =If(User().Email = "analista6.ocgti@unfv.edu.pe" || User().Email = "proyectos.ocgti@unfv.edu.pe",true,false)
         Width: =89
         X: =118
         Y: =761
@@ -198,6 +190,7 @@ Portada As screen:
             Navigate(Lista_Asistencia_Admin,ScreenTransition.Cover)
         Size: =24
         Text: ="Asistencia Tecnicos"
+        Visible: =If(User().Email = "analista6.ocgti@unfv.edu.pe" || User().Email = "proyectos.ocgti@unfv.edu.pe",true,false)
         Width: =306
         X: =197
         Y: =753
@@ -208,6 +201,7 @@ Portada As screen:
         Color: =RGBA(255, 255, 255, 1)
         Height: =60
         Icon: =Icon.View
+        Visible: =If(User().Email = "analista6.ocgti@unfv.edu.pe" || User().Email = "proyectos.ocgti@unfv.edu.pe",true,false)
         Width: =52
         X: =129
         Y: =765

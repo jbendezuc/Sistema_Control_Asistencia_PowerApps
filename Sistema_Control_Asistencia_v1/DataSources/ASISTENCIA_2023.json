@@ -32,6 +32,8 @@
       "Editor#Claims": "Modificado por Claims",
       "ESTADO": "ESTADO",
       "FECHA": "FECHA",
+      "FOTO_RELOJ": "FOTO_RELOJ_INGRESO",
+      "FOTO_RELOJ_SALIDA": "FOTO_RELOJ_SALIDA",
       "HORA": "HORA_INGRESO",
       "HORA_SALIDA": "HORA_SALIDA",
       "ID": "ID",
