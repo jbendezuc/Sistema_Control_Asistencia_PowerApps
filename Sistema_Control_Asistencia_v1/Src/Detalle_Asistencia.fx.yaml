@@ -21,7 +21,7 @@
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =1144
+            Height: =1765
             Width: =Parent.Width
             X: =0
             Y: =0
@@ -249,7 +249,7 @@
                 Height: =143
                 Width: =560
                 X: =37
-                Y: =711
+                Y: =1075
                 ZIndex: =22
 
             Label12_6 As label:
@@ -260,7 +260,7 @@
                     ="Local: "
                 Width: =191
                 X: =37
-                Y: =790
+                Y: =1154
                 ZIndex: =23
 
             Label12_11 As label:
@@ -271,7 +271,7 @@
                     ="Hora Salida: "
                 Width: =191
                 X: =37
-                Y: =722
+                Y: =1086
                 ZIndex: =24
 
             Label12_17 As label:
@@ -281,7 +281,7 @@
                 Text: =varMiAsistencia.HORA_SALIDA
                 Width: =369
                 X: =228
-                Y: =727
+                Y: =1091
                 ZIndex: =25
 
             Label12_18 As label:
@@ -291,7 +291,7 @@
                 Text: =varMiAsistencia.LOCAL_INGRESO
                 Width: =369
                 X: =228
-                Y: =798
+                Y: =1162
                 ZIndex: =26
 
             Label12_19 As label:
@@ -302,7 +302,7 @@
                     ="SALIDA: "
                 Width: =191
                 X: =37
-                Y: =656
+                Y: =1020
                 ZIndex: =27
 
             Rectangle7_4 As rectangle:
@@ -311,7 +311,7 @@
                 Height: =1
                 Width: =560
                 X: =37
-                Y: =776
+                Y: =1140
                 ZIndex: =28
 
             Image6_11 As image:
@@ -320,8 +320,50 @@
                 Height: =123
                 Image: =OCGTI
                 Width: =640
-                Y: =1021
+                Y: =1642
                 ZIndex: =29
+
+            Image1 As image:
+                BorderThickness: =2
+                Height: =340
+                Image: =Substitute(varMiAsistencia.FOTO_RELOJ_INGRESO,"""","")
+                ImagePosition: =ImagePosition.Fill
+                Width: =382
+                X: =216
+                Y: =661
+                ZIndex: =30
+
+            Label12_20 As label:
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                Size: =18
+                Text: |-
+                    ="Foto Reloj: "
+                Width: =191
+                X: =37
+                Y: =660
+                ZIndex: =31
+
+            Image1_6 As image:
+                BorderThickness: =2
+                Height: =340
+                Image: =Substitute(varMiAsistencia.FOTO_RELOJ_SALIDA,"""","")
+                ImagePosition: =ImagePosition.Fill
+                Width: =382
+                X: =215
+                Y: =1266
+                ZIndex: =32
+
+            Label12_21 As label:
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                Size: =18
+                Text: |-
+                    ="Foto Reloj: "
+                Width: =191
+                X: =37
+                Y: =1266
+                ZIndex: =33
 
     Label9 As label:
         Align: =Align.Center
