@@ -328,6 +328,7 @@
                 Height: =340
                 Image: =Substitute(varMiAsistencia.FOTO_RELOJ_INGRESO,"""","")
                 ImagePosition: =ImagePosition.Fill
+                ImageRotation: =ImageRotation.Rotate270
                 Width: =382
                 X: =216
                 Y: =661
