@@ -190,7 +190,7 @@ Portada As screen:
             Navigate(Lista_Asistencia_Admin,ScreenTransition.Cover)
         Size: =24
         Text: ="Asistencia Tecnicos"
-        Visible: =If(User().Email = "analista6.ocgti@unfv.edu.pe" || User().Email = "proyectos.ocgti@unfv.edu.pe",true,false)
+        Visible: =If(User().Email = "analista6.ocgti@unfv.edu.pe" || User().Email = "proyectos.ocgti@unfv.edu.pe" || User().Email = "analista2.ocgti@unfv.edu.pe",true,false)
         Width: =306
         X: =197
         Y: =753
