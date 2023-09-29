@@ -28,9 +28,7 @@ Portada As screen:
         FontWeight: =FontWeight.Bold
         Height: =84
         OnSelect: |
-            =Navigate(Datos_Usuario,ScreenTransition.Cover);
-            
-            //Conexion API
+            =//Conexion API
             
             Set(_api_key,"bbaa8e52768935b19b3e9c68946981bf");
             Set(Respuesta,PowerApp_Tiempo.Run(Location.Latitude,Location.Longitude,_api_key));
@@ -54,6 +52,7 @@ Portada As screen:
             Set(dia,Day(fechaActual));
             Set(mes,Month(fechaActual));
             Set(ano,Year(fechaActual));
+            Navigate(Datos_Usuario,ScreenTransition.Cover);
         Size: =24
         Text: ="Registrar Asistencia"
         Width: =306
