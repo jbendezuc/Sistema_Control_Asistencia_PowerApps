@@ -31,7 +31,7 @@ Portada As screen:
             =//Conexion API
             
             Set(_api_key,"bbaa8e52768935b19b3e9c68946981bf");
-            Set(Respuesta,PowerApp_Tiempo.Run(Text(Location.Latitude),Text(Location.Longitude),_api_key));
+            Set(Respuesta,PowerApp_Tiempo.Run(Location.Latitude,Location.Longitude,_api_key));
             
             //CLIMA API
             Set(Tiempo_Celsius, Left(Respuesta.salida,3));
